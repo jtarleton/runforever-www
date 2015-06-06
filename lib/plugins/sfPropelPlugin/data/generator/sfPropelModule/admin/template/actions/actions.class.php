@@ -6,9 +6,9 @@ require_once(dirname(__FILE__).'/../lib/Base<?php echo ucfirst($this->moduleName
 /**
  * <?php echo $this->getModuleName() ?> actions.
  *
- * @package    ##PROJECT_NAME##
+ * @package    runforever
  * @subpackage <?php echo $this->getModuleName()."\n" ?>
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 abstract class <?php echo $this->getGeneratedModuleName() ?>Actions extends <?php echo $this->getActionsBaseClass()."\n" ?>
 {

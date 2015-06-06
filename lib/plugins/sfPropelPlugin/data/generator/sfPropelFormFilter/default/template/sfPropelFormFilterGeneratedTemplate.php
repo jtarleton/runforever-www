@@ -3,9 +3,9 @@
 /**
  * <?php echo $this->table->getClassname() ?> filter form base class.
  *
- * @package    ##PROJECT_NAME##
+ * @package    runforever
  * @subpackage filter
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 abstract class Base<?php echo $this->table->getClassname() ?>FormFilter extends BaseFormFilterPropel
 {

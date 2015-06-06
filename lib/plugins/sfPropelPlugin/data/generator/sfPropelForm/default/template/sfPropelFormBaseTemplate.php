@@ -3,9 +3,9 @@
 /**
  * Project form base class.
  *
- * @package    ##PROJECT_NAME##
+ * @package    runforever
  * @subpackage form
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 abstract class BaseFormPropel extends sfFormPropel
 {

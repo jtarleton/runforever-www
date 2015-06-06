@@ -5,7 +5,7 @@
  *
  * @method Movie getObject() Returns the current form's model object
  *
- * @package    ##PROJECT_NAME##
+ * @package    runforever
  * @subpackage form
  * @author     Your name here
  */

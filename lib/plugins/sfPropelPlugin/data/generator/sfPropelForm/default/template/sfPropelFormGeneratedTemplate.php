@@ -5,9 +5,9 @@
  *
  * @method <?php echo $this->table->getClassname() ?> getObject() Returns the current form's model object
  *
- * @package    ##PROJECT_NAME##
+ * @package    runforever
  * @subpackage form
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 abstract class Base<?php echo $this->table->getClassname() ?>Form extends BaseFormPropel
 {

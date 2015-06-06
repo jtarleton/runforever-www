@@ -3,9 +3,9 @@
 /**
  * <?php echo $this->getModuleName() ?> module configuration.
  *
- * @package    ##PROJECT_NAME##
+ * @package    runforever
  * @subpackage <?php echo $this->getModuleName()."\n" ?>
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper extends sfModelGeneratorHelper
 {

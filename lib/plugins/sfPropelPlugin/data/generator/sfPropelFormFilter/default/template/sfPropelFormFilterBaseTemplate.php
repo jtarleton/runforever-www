@@ -3,9 +3,9 @@
 /**
  * Project filter form base class.
  *
- * @package    ##PROJECT_NAME##
+ * @package    runforever
  * @subpackage filter
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 abstract class BaseFormFilterPropel extends sfFormFilterPropel
 {
