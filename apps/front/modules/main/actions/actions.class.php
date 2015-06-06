@@ -17,6 +17,11 @@ class mainActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
-  }
+  	$c = new MongoClient();
+	$db = $c->test;
+	$collection = $db->wp_post; 
+	$q = array('_id'=>32);
+	$row = $collection->findOne($q);
+	$this->mongo = $row;
+   }
 }

@@ -5,6 +5,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=runforever
+      dsn:      mysql:unix_socket=/var/run/mysqld/mysqld.sock;dbname=run_forever
       username: root
-      password: 
+      password: pro447 
