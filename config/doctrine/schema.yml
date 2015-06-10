@@ -1,6 +1,103 @@
-RunningGearReviews:
+RfArticles:
   connection: doctrine
-  tableName: running_gear_reviews
+  tableName: rf_articles
+  columns:
+    aid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    title:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    author:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    url:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    img_src:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    source:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    date_published:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+RfBlogPosts:
+  connection: doctrine
+  tableName: rf_blog_posts
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    pid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+RfBlogTermRelationships:
+  connection: doctrine
+  tableName: rf_blog_term_relationships
+  columns:
+    rid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+RfBlogTermTaxonomy:
+  connection: doctrine
+  tableName: rf_blog_term_taxonomy
+  columns:
+    ttid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+RfBlogTerms:
+  connection: doctrine
+  tableName: rf_blog_terms
+  columns:
+    term_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+RfGearReviews:
+  connection: doctrine
+  tableName: rf_gear_reviews
   columns:
     id:
       type: integer(8)
@@ -13,16 +110,97 @@ RunningGearReviews:
       primary: false
       notnull: true
       autoincrement: false
+    product:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    product_description:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     review_text:
       type: string(200)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
-RunningPics:
+    star_rating:
+      type: float()
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0'
+      notnull: false
+      autoincrement: false
+RfInspirationalMovies:
   connection: doctrine
-  tableName: running_pics
+  tableName: rf_inspirational_movies
+  columns:
+    mid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    film_title:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    film_genre:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    imdb_link:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    directed_by:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    cast:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    release_date:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    star_rating:
+      type: float()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+RfPics:
+  connection: doctrine
+  tableName: rf_pics
   columns:
     id:
       type: integer(8)
@@ -49,9 +227,9 @@ RunningPics:
       primary: false
       notnull: true
       autoincrement: false
-RunningQuotes:
+RfQuotes:
   connection: doctrine
-  tableName: running_quotes
+  tableName: rf_quotes
   columns:
     qid:
       type: integer(4)
@@ -73,45 +251,90 @@ RunningQuotes:
       primary: false
       notnull: true
       autoincrement: false
-Sessions:
+RfRecipes:
   connection: doctrine
-  tableName: sessions
+  tableName: rf_recipes
+  columns:
+    rid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    title:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    description:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    img_src:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ingredients:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    directions:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+RfSessions:
+  connection: doctrine
+  tableName: rf_sessions
   columns:
     id:
       type: integer(8)
       autoincrement: true
       primary: true
     session_id:
-      type: integer(4)
+      type: string(250)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     ip:
-      type: string(200)
+      type: string(250)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
     started_at:
       type: timestamp(25)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
     expires_at:
       type: timestamp(25)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
-Users:
+RfUsers:
   connection: doctrine
-  tableName: users
+  tableName: rf_users
   columns:
     uid:
       type: integer(4)
@@ -119,24 +342,31 @@ Users:
       unsigned: false
       primary: true
       autoincrement: true
+    facebook_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     username:
       type: string(200)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
     userpass:
       type: string(200)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
     ip:
       type: string(200)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
