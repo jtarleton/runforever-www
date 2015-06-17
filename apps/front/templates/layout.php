@@ -44,7 +44,7 @@
     <div class="footer">
       <div class="container clearfix">
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Your Name | Template design by Veselka for <a href="http://www.andreasviklund.com">andreasviklund.com</a> | Best hosted at <a href="http://www.svenskadomaner.se">www.svenskadomaner.se</a></p>
+        <p>&copy; 2015 RunForever</p>
       </div>
     </div>
     <!-- Bootstrap core JavaScript

@@ -6,6 +6,31 @@ homepage:
   url:   /
   param: { module: main, action: index }
 
+events:
+  url: /running_events
+  param: { module: main, action: events }
+
+articles:
+  url: /running_articles
+  param: { module: main, action: articles }
+
+gear:
+  url: /running_gear
+  param: { module: main, action: gear }
+
+quotes:
+  url: /running_quotes
+  param: { module: main, action: quotes }
+
+forever:
+  url: /runforever
+  param: { module: main, action: runforever }
+
+about:
+  url: /about
+  param: { module: main, action: about }
+
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
