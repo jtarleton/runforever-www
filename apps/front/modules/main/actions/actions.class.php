@@ -24,4 +24,23 @@ class mainActions extends sfActions
 	$row = $collection->findOne($q);
 	$this->mongo = $row;
    }
+public function executeAbout() {
 }
+public function executeGear() {
+$this->gear = RfGearReviewsTable::getInstance()->findAll();
+}
+public function executeRecipes() {
+$this->recipes = RfRecipesTable::getInstance()->findAll();
+}
+public function executeRunforever() {
+$this->posts = array(); //RfBlogPostsTable::getInstance()->findAll();
+}
+public function executeEvents() {
+$this->events = array(); ////RfEventsTable::getInstance()->findAll();
+}
+public function executeArticles() {
+$this->articles = RfArticlesTable::getInstance()->findAll();
+}
+public function executeQuotes() {
+$this->quotes = RfQuotesTable::getInstance()->findAll();
+}}
