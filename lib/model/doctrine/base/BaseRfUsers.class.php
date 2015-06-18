@@ -12,17 +12,20 @@ Doctrine_Manager::getInstance()->bindComponent('RfUsers', 'doctrine');
  * @property string $username
  * @property string $userpass
  * @property string $ip
+ * @property Doctrine_Collection $RfSessions
  * 
- * @method integer getUid()         Returns the current record's "uid" value
- * @method integer getFacebookId()  Returns the current record's "facebook_id" value
- * @method string  getUsername()    Returns the current record's "username" value
- * @method string  getUserpass()    Returns the current record's "userpass" value
- * @method string  getIp()          Returns the current record's "ip" value
- * @method RfUsers setUid()         Sets the current record's "uid" value
- * @method RfUsers setFacebookId()  Sets the current record's "facebook_id" value
- * @method RfUsers setUsername()    Sets the current record's "username" value
- * @method RfUsers setUserpass()    Sets the current record's "userpass" value
- * @method RfUsers setIp()          Sets the current record's "ip" value
+ * @method integer             getUid()         Returns the current record's "uid" value
+ * @method integer             getFacebookId()  Returns the current record's "facebook_id" value
+ * @method string              getUsername()    Returns the current record's "username" value
+ * @method string              getUserpass()    Returns the current record's "userpass" value
+ * @method string              getIp()          Returns the current record's "ip" value
+ * @method Doctrine_Collection getRfSessions()  Returns the current record's "RfSessions" collection
+ * @method RfUsers             setUid()         Sets the current record's "uid" value
+ * @method RfUsers             setFacebookId()  Sets the current record's "facebook_id" value
+ * @method RfUsers             setUsername()    Sets the current record's "username" value
+ * @method RfUsers             setUserpass()    Sets the current record's "userpass" value
+ * @method RfUsers             setIp()          Sets the current record's "ip" value
+ * @method RfUsers             setRfSessions()  Sets the current record's "RfSessions" collection
  * 
  * @package    runforever
  * @subpackage model
@@ -83,6 +86,8 @@ abstract class BaseRfUsers extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        
+        $this->hasMany('RfSessions', array(
+             'local' => 'uid',
+             'foreign' => 'uid'));
     }
 }

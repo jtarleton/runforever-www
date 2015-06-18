@@ -13,22 +13,22 @@ Doctrine_Manager::getInstance()->bindComponent('RfArticles', 'doctrine');
  * @property string $url
  * @property string $img_src
  * @property string $source
- * @property timestamp $date_published
+ * @property timestamp $created_on
  * 
- * @method integer    getAid()            Returns the current record's "aid" value
- * @method string     getTitle()          Returns the current record's "title" value
- * @method string     getAuthor()         Returns the current record's "author" value
- * @method string     getUrl()            Returns the current record's "url" value
- * @method string     getImgSrc()         Returns the current record's "img_src" value
- * @method string     getSource()         Returns the current record's "source" value
- * @method timestamp  getDatePublished()  Returns the current record's "date_published" value
- * @method RfArticles setAid()            Sets the current record's "aid" value
- * @method RfArticles setTitle()          Sets the current record's "title" value
- * @method RfArticles setAuthor()         Sets the current record's "author" value
- * @method RfArticles setUrl()            Sets the current record's "url" value
- * @method RfArticles setImgSrc()         Sets the current record's "img_src" value
- * @method RfArticles setSource()         Sets the current record's "source" value
- * @method RfArticles setDatePublished()  Sets the current record's "date_published" value
+ * @method integer    getAid()        Returns the current record's "aid" value
+ * @method string     getTitle()      Returns the current record's "title" value
+ * @method string     getAuthor()     Returns the current record's "author" value
+ * @method string     getUrl()        Returns the current record's "url" value
+ * @method string     getImgSrc()     Returns the current record's "img_src" value
+ * @method string     getSource()     Returns the current record's "source" value
+ * @method timestamp  getCreatedOn()  Returns the current record's "created_on" value
+ * @method RfArticles setAid()        Sets the current record's "aid" value
+ * @method RfArticles setTitle()      Sets the current record's "title" value
+ * @method RfArticles setAuthor()     Sets the current record's "author" value
+ * @method RfArticles setUrl()        Sets the current record's "url" value
+ * @method RfArticles setImgSrc()     Sets the current record's "img_src" value
+ * @method RfArticles setSource()     Sets the current record's "source" value
+ * @method RfArticles setCreatedOn()  Sets the current record's "created_on" value
  * 
  * @package    runforever
  * @subpackage model
@@ -93,7 +93,7 @@ abstract class BaseRfArticles extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 250,
              ));
-        $this->hasColumn('date_published', 'timestamp', 25, array(
+        $this->hasColumn('created_on', 'timestamp', 25, array(
              'type' => 'timestamp',
              'fixed' => 0,
              'unsigned' => false,

@@ -43,7 +43,7 @@ RfArticles:
       primary: false
       notnull: false
       autoincrement: false
-    date_published:
+    created_on:
       type: timestamp(25)
       fixed: false
       unsigned: false
@@ -55,15 +55,38 @@ RfBlogPosts:
   tableName: rf_blog_posts
   columns:
     id:
-      type: integer(8)
-      autoincrement: true
-      primary: true
-    pid:
       type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    title:
+      type: string(250)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
+      autoincrement: false
+    body:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_on:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    updated_on:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
       autoincrement: false
 RfBlogTermRelationships:
   connection: doctrine
@@ -95,21 +118,117 @@ RfBlogTerms:
       unsigned: false
       primary: true
       autoincrement: true
-RfGearReviews:
-  connection: doctrine
-  tableName: rf_gear_reviews
-  columns:
-    id:
-      type: integer(8)
-      autoincrement: true
-      primary: true
-    rid:
-      type: integer(4)
+    description:
+      type: string(250)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
+    type:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+RfEvents:
+  connection: doctrine
+  tableName: rf_events
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    race_type:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    event_type:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    date:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    time:
+      type: time(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    year:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    hosted_by:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    city:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    state:
+      type: string(2)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    last_year_participant_count:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    website_url:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+RfGearReviews:
+  connection: doctrine
+  tableName: rf_gear_reviews
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
     product:
       type: string(255)
       fixed: false
@@ -318,6 +437,13 @@ RfSessions:
       primary: false
       notnull: false
       autoincrement: false
+    uid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     started_at:
       type: timestamp(25)
       fixed: false
@@ -332,6 +458,212 @@ RfSessions:
       primary: false
       notnull: false
       autoincrement: false
+  relations:
+    RfUsers:
+      local: uid
+      foreign: uid
+      type: one
+RfSlides:
+  connection: doctrine
+  tableName: rf_slides
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    position:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    slideshow_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    slide_title:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    slide_caption:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    slide_body:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    img_url:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RfSlideshow:
+      local: slideshow_id
+      foreign: id
+      type: one
+RfSlideshow:
+  connection: doctrine
+  tableName: rf_slideshow
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    slideshow_title:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    intro_text:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    cover_img_url:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RfSlides:
+      local: id
+      foreign: slideshow_id
+      type: many
+RfSurvey:
+  connection: doctrine
+  tableName: rf_survey
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RfSurveyQuestions:
+      local: id
+      foreign: survey_id
+      type: many
+RfSurveyAnswers:
+  connection: doctrine
+  tableName: rf_survey_answers
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    question_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    ans_text:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    uid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_on:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0000-00-00 00:00:00'
+      notnull: true
+      autoincrement: false
+    updated_on:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0000-00-00 00:00:00'
+      notnull: true
+      autoincrement: false
+  relations:
+    RfSurveyQuestions:
+      local: question_id
+      foreign: id
+      type: one
+RfSurveyQuestions:
+  connection: doctrine
+  tableName: rf_survey_questions
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    survey_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    question_text:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    RfSurvey:
+      local: survey_id
+      foreign: id
+      type: one
+    RfSurveyAnswers:
+      local: id
+      foreign: question_id
+      type: many
 RfUsers:
   connection: doctrine
   tableName: rf_users
@@ -370,3 +702,8 @@ RfUsers:
       primary: false
       notnull: false
       autoincrement: false
+  relations:
+    RfSessions:
+      local: uid
+      foreign: uid
+      type: many

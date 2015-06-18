@@ -10,19 +10,25 @@ Doctrine_Manager::getInstance()->bindComponent('RfSessions', 'doctrine');
  * @property integer $id
  * @property string $session_id
  * @property string $ip
+ * @property integer $uid
  * @property timestamp $started_at
  * @property timestamp $expires_at
+ * @property RfUsers $RfUsers
  * 
  * @method integer    getId()         Returns the current record's "id" value
  * @method string     getSessionId()  Returns the current record's "session_id" value
  * @method string     getIp()         Returns the current record's "ip" value
+ * @method integer    getUid()        Returns the current record's "uid" value
  * @method timestamp  getStartedAt()  Returns the current record's "started_at" value
  * @method timestamp  getExpiresAt()  Returns the current record's "expires_at" value
+ * @method RfUsers    getRfUsers()    Returns the current record's "RfUsers" value
  * @method RfSessions setId()         Sets the current record's "id" value
  * @method RfSessions setSessionId()  Sets the current record's "session_id" value
  * @method RfSessions setIp()         Sets the current record's "ip" value
+ * @method RfSessions setUid()        Sets the current record's "uid" value
  * @method RfSessions setStartedAt()  Sets the current record's "started_at" value
  * @method RfSessions setExpiresAt()  Sets the current record's "expires_at" value
+ * @method RfSessions setRfUsers()    Sets the current record's "RfUsers" value
  * 
  * @package    runforever
  * @subpackage model
@@ -58,6 +64,15 @@ abstract class BaseRfSessions extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 250,
              ));
+        $this->hasColumn('uid', 'integer', 4, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 4,
+             ));
         $this->hasColumn('started_at', 'timestamp', 25, array(
              'type' => 'timestamp',
              'fixed' => 0,
@@ -81,6 +96,8 @@ abstract class BaseRfSessions extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        
+        $this->hasOne('RfUsers', array(
+             'local' => 'uid',
+             'foreign' => 'uid'));
     }
 }
