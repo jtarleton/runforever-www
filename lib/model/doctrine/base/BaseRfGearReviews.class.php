@@ -60,14 +60,14 @@ abstract class BaseRfGearReviews extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
-        $this->hasColumn('review_text', 'string', 200, array(
+        $this->hasColumn('review_text', 'string', null, array(
              'type' => 'string',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
              'autoincrement' => false,
-             'length' => 200,
+             'length' => '',
              ));
         $this->hasColumn('star_rating', 'float', null, array(
              'type' => 'float',

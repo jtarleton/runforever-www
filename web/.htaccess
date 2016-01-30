@@ -1,3 +1,8 @@
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /var/runforever-www/web/.htpasswd
+require valid-user
+
 Options +FollowSymLinks +ExecCGI
 
 <IfModule mod_rewrite.c>

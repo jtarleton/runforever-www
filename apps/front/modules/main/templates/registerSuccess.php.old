@@ -1,0 +1,28 @@
+<?php use_helper('CustomForm'); ?>
+
+
+<div class="container clearfix mt-100 mb-20">
+      <h2><span>Register for a new Account</span></h2>
+
+<div class="row">
+
+
+
+
+
+<form class="form-horizontal" action="<?php echo url_for('main/register') ?>" method="post">
+
+
+
+
+
+				<?php foreach(array($form['field1'], $form['field2']) as $sfFormFieldObj): ?>
+					<?php printAsBootstrapForm($form, $sfFormFieldObj); ?>
+				<?php endforeach;   ?>
+
+
+<p><input type="submit" value="Submit" name="sbmt-register"></input>
+</p>
+</form>
+
+</div></div>

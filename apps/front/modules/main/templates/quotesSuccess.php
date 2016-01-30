@@ -8,10 +8,18 @@
 <?php foreach($quotes as $quote): ?>
 <div class="row">
         <div class="c12">
+<br /><br />
+<div style="float:left;margin-right:20px;">
+<img src="<?php echo $quote->getQuoteImgSrc(); ?>" style="width:100px; height:100px;"></img>
+</div>
+
 <p><i>&#8220;<?php echo $quote->getQuoteText(); ?>&#8221;</i>
-<br /><br /><small>
+<br /><br />
+<small>
 <?php echo $quote->getQuoteAuthor(); ?></small>
-</p><br /><br />
+</p>
+<div style="clear:both;"></div>
+<br /><br />
 </div>
 <!--         <div class="c3">
 </div> -->

@@ -74,6 +74,13 @@ RfBlogPosts:
       primary: false
       notnull: false
       autoincrement: false
+    img_src:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     created_on:
       type: timestamp(25)
       fixed: false
@@ -244,7 +251,7 @@ RfGearReviews:
       notnull: false
       autoincrement: false
     review_text:
-      type: string(200)
+      type: string()
       fixed: false
       unsigned: false
       primary: false
@@ -356,6 +363,20 @@ RfQuotes:
       unsigned: false
       primary: true
       autoincrement: true
+    order:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    quote_img_src:
+      type: string(200)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
     quote_author:
       type: string(200)
       fixed: false

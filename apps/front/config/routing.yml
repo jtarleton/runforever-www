@@ -5,7 +5,28 @@
 homepage:
   url:   /
   param: { module: main, action: index }
-
+register:
+  url: /register
+  param: { module: main, action: register }
+login:
+  url: /login
+  param: { module: main, action: login }
+loginfb:
+  url: /login-fb
+  param: { module: main, action: loginfb }
+recipes:
+  url: /recipes
+  param: { module: main, action: recipes }
+kit:
+  url: /kit
+  param: { module: main, action: kit }
+recipedetail:
+  url: /recipe/:rid
+  param: { module: main, action: recipedetail }
+  
+films:
+  url: /running_films
+  param: { module: main, action: films }
 events:
   url: /running_events
   param: { module: main, action: events }
@@ -23,13 +44,15 @@ quotes:
   param: { module: main, action: quotes }
 
 forever:
-  url: /runforever
+  url: /news
   param: { module: main, action: runforever }
 
 about:
   url: /about
   param: { module: main, action: about }
-
+ss:
+  url: /slideshows
+  param: { module: main, action: slideshows } 
 
 # generic rules
 # please, remove them by adding more specific rules

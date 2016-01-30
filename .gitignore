@@ -1,3 +1,4 @@
+web/.htpasswd
 config/databases.yml
 cache/
 log/
