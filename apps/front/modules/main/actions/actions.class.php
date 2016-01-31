@@ -32,7 +32,7 @@ public function executeKit() {
 
 }
 public function executeFilms(sfWebRequest $request) {
-$this->films = RfInspirationalMoviesTable::getInstance()->findAll();
+$this->films = RfFilmsTable::getInstance()->findAll();
 }
 
 
