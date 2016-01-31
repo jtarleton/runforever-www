@@ -17,7 +17,7 @@
                 <header>
                   <div class="title">
                     <h2><a href="#"><span><?php echo $post->getTitle(); ?></span></a></h2></div>
-
+</header>
                     <div>
                         <p><?php echo nl2br($post->getBody()); ?></p>
 

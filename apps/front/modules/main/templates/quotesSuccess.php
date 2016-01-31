@@ -1,10 +1,10 @@
 
 
-      <h2><span>Quotes</span></h2>
+    
  <article class="post">
                 <header>
                   <div class="title">
-                    <h2><a href="#"><span>Welcome</span></a></h2>
+                     <h2><span>Quotes</span></h2>
                 </div>
 </header>
 <?php foreach($quotes as $quote): ?>

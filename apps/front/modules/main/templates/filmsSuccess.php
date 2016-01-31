@@ -1,11 +1,15 @@
 
- <h2><span><?php echo link_to('Home','@homepage'); ?> | Films
- </span></h2>
+ <article class="post">
+                <header>
+                  <div class="title">
+                     <h2><span>Films</span></h2>
+                </div>
+</header>
 
 
 <?php foreach($films as $film): ?>
-<div class="row">
-<div class="c12">
+<div>
+
 <b><?php echo $film->getFilmTitle(); ?></b><br/ >
-</div></div>
-<?php endforeach; ?>
+</div>
+<?php endforeach; ?> </article>

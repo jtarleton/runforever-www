@@ -1,14 +1,16 @@
 
 
-      <h2><span>What's New</span></h2>
-      
-
+ <article class="post">
+                <header>
+                  <div class="title">
+                     <h2><span>What's New</span></h2>
+                </div>
+</header>
 <?php foreach($posts as $post): ?>
 
 
 <div>
-		<div class="c12">
-
+		
 <p><b><?php echo $post->getTitle().'</b> <span style="color: #CCC; padding-left:10px;"> '. date('m/d/Y g:i:s a', strtotime($post->getCreatedOn()) ).'</span>'; 
 
 
@@ -30,11 +32,7 @@ echo '<i>Updated on: '. date('m/d/Y g:i:s a', strtotime($post->getCreatedOn())).
 
 
         	</div>
-	</div>
-
-
-
 
 
 	<?php endforeach; ?>
-
+</article>
