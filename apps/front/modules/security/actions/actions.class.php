@@ -39,7 +39,7 @@ class securityActions extends sfActions
 		$now = time();
 		$expiredDiff = $now  - $u->getVerificationTokenTs();
 		$expiredInvite = ($expiredDiff > 1800 ) ? true : false;
-		$alreadyVerified = !empty($u->isVerified()) ? true : false;
+		$alreadyVerified = !empty($u->getIsVerified()) ? true : false;
 		if($token === $usertoken && $u instanceof RfUsers && !$expiredInvite && !$alreadyVerified) {
 			$u->setIsVerified(1);
 			$u->save();
