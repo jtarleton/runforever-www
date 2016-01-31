@@ -1,4 +1,6 @@
 <div class="container">
+<h2><span>Login</span></h2>
+
 
 <div class="row">
 <form class="xform-horizontal xform-signin" action="<?php echo url_for('security/login') ?>"  method="POST">
