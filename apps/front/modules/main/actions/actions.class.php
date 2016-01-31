@@ -73,7 +73,7 @@ public function executeRegister(sfWebRequest $request) {
                     $u->setUserpass($hashpass);
                     $u->setEmail($request->getParameter('email'));
                       $u->setIp($ipAddress);
-                    $u->setValidationLink($token);
+                    $u->setVerificationToken($token);
                     $u->setIsVerified(0);
                     $u->save();
                   
