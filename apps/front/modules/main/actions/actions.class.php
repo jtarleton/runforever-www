@@ -60,7 +60,11 @@ public function executeRegister(sfWebRequest $request) {
 
             if(!empty($request->getParameter('username'))){
 
-
+              
+              $ipAddress = $_SERVER['REMOTE_ADDR'];
+                  if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
+                        $ipAddress = array_pop(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
+                    }
 
                     $u =new RfUsers;
 
@@ -68,6 +72,7 @@ public function executeRegister(sfWebRequest $request) {
                     $hashpass = Hashlib::create_hash($request->getParameter('userpass'));
                     $u->setUserpass($hashpass);
                     $u->setEmail($request->getParameter('email'));
+                      $u->setIp($ipAddress);
                     $u->setValidationLink($token);
                     $u->setIsVerified(0);
                     $u->save();
@@ -89,7 +94,7 @@ public function executeRegister(sfWebRequest $request) {
             mail($request->getParameter('email'), 'Run Forever Registration', $message);
       
               $user = $this->getUser();
-              $user->setFlash('success','');
+              $user->setFlash('notice','Thanks! Your registration invitation has been sent.  Please check your email to verify the account.');
 
             $this->redirect('main/index');
           } 
