@@ -80,12 +80,13 @@ public function executeRegister(sfWebRequest $request) {
             }
 
 
-            $u =Doctrine_Core::getTable('RfUsers')->findOneBy('username', $values['username']); 
+            $u =Doctrine_Core::getTable('RfUsers')->findOneBy('username', $request->getParameter('username')); 
           
 
+            $usrname=  $request->getParameter('username');
 
     	       // The message
-            $message = "Hi there!\r\nThis is to confirm your request for an account on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete.\r\n\r\n$activateLink\r\n\r\nIn the event this registration was initiated in error, please let us know.\r\nThe RunForever Team";
+            $message = "Hello $usrname!\r\nThis is to confirm your request for an account on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete.\r\n\r\n$activateLink\r\n\r\nIn the event this registration was initiated in error, please let us know.\r\nThe RunForever Team";
 
             // In case any of our lines are larger than 70 characters, we should use wordwrap()
             $message = wordwrap($message, 70, "\r\n");
