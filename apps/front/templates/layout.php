@@ -38,12 +38,24 @@
 <?php require('top.html'); ?>
 
 
-<?php $sf_user = $this->getUser(); if ($sf_user->hasFlash('error')): ?>
-  <div class="flash_error"><?php echo $sf_user->getFlash('error') ?></div>
-<?php endif ?>
+
+
+
 
 <br /><br />
+
+
 <br /><br />
+
+
+<?php if ($sf_user->hasFlash('notice')): ?>
+  <div style="background-color:#CCC; padding:10px;" class="flash_notice"><?php echo $sf_user->getFlash('notice') ?></div>
+<?php endif ?>
+ 
+<?php if ($sf_user->hasFlash('error')): ?>
+  <div style="background-color:salmon; padding:10px;"  class="flash_error"><?php echo $sf_user->getFlash('error') ?></div>
+<?php endif ?>
+
 <br /><br />
 <br /><br />
     <!-- Contant -->
