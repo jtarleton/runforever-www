@@ -1,0 +1,1 @@
+<a href="#" onclick="close_window();return false;">Close this</a> or to <a href="http://www.runforever.co">login</a>.
