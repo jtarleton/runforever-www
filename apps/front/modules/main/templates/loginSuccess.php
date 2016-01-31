@@ -24,5 +24,7 @@
 <p><input type="submit" value="Login" name="sbmt-login"></input>
 </p>
 </form>
+Please <a href="http://www.runforever.co/register">Register for an account</a> | 
+<a href="http://www.runforever.co/security/forgotpassword">Forget password?</a>
 
 </div></div>
