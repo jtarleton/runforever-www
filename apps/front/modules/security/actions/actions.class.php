@@ -131,7 +131,7 @@ class securityActions extends sfActions
             mail($request->getParameter('email'), 'Your Run Forever Account Information', $message);
       
               
-              $user->setFlash('notice','No worries! Your new password has been sent.  Please check your email.');
+              $this->getUser()->setFlash('notice','No worries! Your new password has been sent.  Please check your email.');
 
             $this->redirect('security/invited');
           } 
