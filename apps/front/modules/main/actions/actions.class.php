@@ -53,7 +53,7 @@ public function executeRegister(sfWebRequest $request) {
         array('email'=>$request->getParameter('email'),
           'username'=>$request->getParameter('username'),
           'userpass'=>$request->getParameter('userpass'),
-          'g-recaptcha-response'=>$request->getParameter('g-recaptcha-response')
+          
         )
       );
   
