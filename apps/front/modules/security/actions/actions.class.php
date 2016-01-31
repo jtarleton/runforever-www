@@ -65,6 +65,118 @@ class securityActions extends sfActions
 	}
 
 
+	public function executeForgotpassword($request) {
+
+		$this->form = new sfForm;
+			$this->form->setWidgets(
+				array(
+			      'email'    => new sfWidgetFormInputText(array('label'=>'Email'), array('placeholder'=>'me@example.com','class'=>'form-control')),
+			      
+			      )
+			);
+
+		$this->form->setValidators(
+				array(
+			      'email'    => new sfValidatorString()
+			     
+			      )
+			);
+
+
+
+
+
+
+
+    if ($request->isMethod('post'))
+    {
+      $this->form->bind(array('email'=>$request->getParameter('email'),
+        	
+
+
+        	));
+      
+          if ($this->form->isValid())
+          {
+           
+
+          	$message = '';
+            if(!empty($request->getParameter('email'))){
+
+              
+
+                    $random = Hashlib::generateRandomString();
+                    $u =Doctrine_Core::getTable('RfUsers')->findOneBy('email', $request->getParameter('email')); 
+          
+                    $now = time();
+                    
+                    $hashpass = Hashlib::create_hash($random);
+                    $u->setUserpass($hashpass);
+        
+                    $u->save();
+
+                    $usrname=  $u->getUsername();
+		            $newpassinfo = $random;
+		    	    // The message
+		            $message .= "Hello $usrname!\r\nThis is to provide you with a reset password on Run Forever.\r\n\r\n$newpassinfo\r\n\r\nIf this information request was initiated in error, please let us know.\r\nThe RunForever Team";
+
+                  
+            }
+
+
+            
+
+            
+            // In case any of our lines are larger than 70 characters, we should use wordwrap()
+            $message = wordwrap($message, 70, "\r\n");
+
+            // Send
+            mail($request->getParameter('email'), 'Your Run Forever Account Information', $message);
+      
+              
+              $user->setFlash('notice','No worries! Your new password has been sent.  Please check your email.');
+
+            $this->redirect('security/invited');
+          } 
+          else {
+
+            		$user = $this->getUser();
+            		$user->setFlash('error','Something went wrong!');
+            		
+
+            	foreach($this->form->getErrorSchema()->getErrors() as $key => $error)
+              {
+                echo '<p>' . $key . ': ' . $error . '</p>';
+              }
+
+
+    		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
 
 	public function executeLogin(sfWebRequest $request)
 	{
