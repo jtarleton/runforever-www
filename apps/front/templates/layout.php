@@ -43,6 +43,9 @@
 <?php endif ?>
 
 <br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
     <!-- Contant -->
 <?php echo $sf_content; ?>
 
