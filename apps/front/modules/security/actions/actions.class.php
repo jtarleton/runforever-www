@@ -78,13 +78,15 @@ class securityActions extends sfActions
 		$this->form->setValidators(
 				array(
 			      'email'    => new sfValidatorString()
-			     
+			'g-recaptcha-response'=>new GoogleCaptchaValidator
 			      )
 			);
 
     if ($request->isMethod('post'))
     {
-      $this->form->bind(array('email'=>$request->getParameter('email')));
+      $this->form->bind(array(
+  'g-recaptcha-response'=>$request->getParameter('g-recaptcha-response'),
+      	'email'=>$request->getParameter('email')));
       
           if ($this->form->isValid())
           {

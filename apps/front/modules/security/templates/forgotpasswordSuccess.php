@@ -6,7 +6,7 @@
 		<?php echo $form; ?>
 
 		<input type="submit" name="submit" value="Reset password"></input>
-		</form>
+		<div class="g-recaptcha" data-sitekey="6LdH8BYTAAAAAEEuu8ITEm48lAbDXvBdvazB90X_"></div></form>
 
 	</div>
 
