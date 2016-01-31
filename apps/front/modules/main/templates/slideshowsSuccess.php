@@ -2,7 +2,7 @@
   <article class="post">
                 <header>
                   <div class="title">
-                     <h2><span>Quotes</span></h2>
+                     <h2><span>Slideshows</span></h2>
                 </div>
 </header>
 

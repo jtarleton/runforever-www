@@ -13,11 +13,9 @@ jQuery('#eventsList').dataTable();
  <article class="post">
                 <header>
                   <div class="title">
-                     <h2><span>Quotes</span></h2>
+                     <h2><span>Events</span></h2>
                 </div>
 </header>
-<?php foreach($quotes as $quote): ?>
-
 
 
 <div>
