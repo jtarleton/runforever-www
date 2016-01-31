@@ -45,7 +45,7 @@ class securityActions extends sfActions
 			$u->save();
 			$this->getUser()->setFlash('notice','Your account has been successfully activated.  You may now login.');
 			$this->getUser()->setAuthenticated(false);
-						$this->redirect('security/login'); 
+						$this->redirect('security/login?username='.$u->getUsername()); 
 		} elseif($alreadyVerified) {
 			$this->getUser()->setFlash('error','This account has already been verified.');
 			$this->getUser()->setAuthenticated(false);
@@ -89,7 +89,7 @@ if(!in_array( $_SERVER['GEOIP_ADDR'], $ips) ){
 	
 		$this->form->setWidgets(
 				array(
-			      'username'    => new sfWidgetFormInputText(array('label'=>'Username'), array('placeholder'=>'username','class'=>'form-control')),
+			      'username'    => new sfWidgetFormInputText(array('label'=>'Username'), array('default'=>$request->getUsername(), 'placeholder'=>'username','class'=>'form-control')),
 			      'passwd'   => new sfWidgetFormInputPassword(array('label'=>'Password'), array('placeholder'=>'password','class'=>'form-control')) 
 			      )
 			);
