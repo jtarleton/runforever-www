@@ -38,7 +38,7 @@
 <?php require('top.html'); ?>
 
 
-<?php if ($sf_user->hasFlash('error')): ?>
+<?php $sf_user = $this->getUser(); if ($sf_user->hasFlash('error')): ?>
   <div class="flash_error"><?php echo $sf_user->getFlash('error') ?></div>
 <?php endif ?>
 

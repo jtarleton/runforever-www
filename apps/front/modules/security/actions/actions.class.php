@@ -25,6 +25,24 @@ class securityActions extends sfActions
 		$this->redirect('security/login');
 	}
 
+	public function executeVerify( sfWebRequest $request )
+	{
+
+		$u =Doctrine_Core::getTable('RfUsers')->findOneBy('verification_token', $request->getParameter('link')); 
+
+		$usertoken = $u->getVerificationToken();
+
+		$token = $request->getParameter('link');
+		
+		if($token === $usertoken && $u instanceof RfUsers) {
+			$u->setIsVerified(1);
+			$u->save();
+			$this->getUser()->setFlash('error','Your account has been successfully activated.');
+			$this->getUser()->setAuthenticated(true);
+						$this->redirect('main/index'); //Login succeeded!
+		}
+
+	}
 
 	public function executeAjax( sfWebRequest $request )
 	{

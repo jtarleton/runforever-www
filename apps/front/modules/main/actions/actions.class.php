@@ -55,8 +55,32 @@ if ($request->isMethod('post'))
       {
 $token = md5($request->getParameter('email').time());
 $activateLink = 'http://www.runforever.co/security/verify?link='.$token;
+
+
+
+if(!empty($request->getParameter('username'))){
+
+
+
+        $u =new RfUsers;
+
+        $u->setUsername($request->getParameter('username'));
+        $hashpass = Hashlib::create_hash($request->getParameter('userpass'));
+        $u->setUserpass($hashpass);
+        $u->setEmail($request->getParameter('email'));
+        $u->setValidationLink($token);
+        $u->setIsVerified(0);
+        $u->save();
+      
+
+
+
+        $u =Doctrine_Core::getTable('RfUsers')->findOneBy('username', $values['username']); 
+      
+
+
 	// The message
-$message = "This email was submitted for a new account registration on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete. \r\n \t$activateLink \r\nIn the event this registration was initiated in error, please let us know.\r\n- The RunForever Team";
+$message = "Hi there!\r\nThis is to confirm your request for an account on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete.\r\n\r\n$activateLink\r\n\r\nIn the event this registration was initiated in error, please let us know.\r\nThe RunForever Team";
 
 // In case any of our lines are larger than 70 characters, we should use wordwrap()
 $message = wordwrap($message, 70, "\r\n");
