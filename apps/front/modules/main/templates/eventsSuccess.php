@@ -9,10 +9,18 @@ jQuery('#eventsList').dataTable();
 </script>
 
 
-      <h2><span>Races & Events</span></h2>
+       
+ <article class="post">
+                <header>
+                  <div class="title">
+                     <h2><span>Quotes</span></h2>
+                </div>
+</header>
+<?php foreach($quotes as $quote): ?>
 
 
 
+<div>
 
 
 
@@ -29,4 +37,4 @@ jQuery('#eventsList').dataTable();
 <tr><td><?php echo $event->getName(); ?></td></tr>
 <?php endforeach; ?></tbody>
 </table>
-
+</div></article>

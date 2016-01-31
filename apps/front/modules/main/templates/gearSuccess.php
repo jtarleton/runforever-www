@@ -1,8 +1,11 @@
 
-      <h2><span>Gear</span></h2>
-      <div class="c12 row">
-<p>Gear reviews...</p>      
-</div>
+    
+ <article class="post">
+                <header>
+                  <div class="title">
+                     <h2><span>Gear</span></h2>
+                </div>
+</header>
 
 	<?php foreach($gear as $gearItem): ?>
       <div class="row">
@@ -17,9 +20,10 @@
 <p>...</p>        
 </div>
         <div class="c6">
-          <img src="images/custom-1.jpg" alt="" style="width:100px;height:100px;"></img>
+          <img src="http://www.runforever.co/images/custom-1.jpg" alt="" style="width:100px;height:100px;"></img>
         </div>
       </div>
 	<?php endforeach; ?>
      
 
+</article>
