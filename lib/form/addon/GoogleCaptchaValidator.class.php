@@ -21,10 +21,13 @@ class GoogleCaptchaValidator extends sfValidatorBase
                   CURLOPT_HEADER=>0,
                   CURLOPT_URL => $googlepost['url'], 
                   CURLOPT_POST => true,
-                  CURLOPT_POSTFIELDS => $googlepost['params'],
+                  
                   CURLOPT_RETURNTRANSFER => true
                 );
                 curl_setopt_array($ch, $opts);
+
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $googlepost['params']);
+
                 $returnCurl = curl_exec($ch);
                 curl_close($ch);
 
@@ -46,7 +49,7 @@ class GoogleCaptchaValidator extends sfValidatorBase
 
 
         if($captchaOK!==true){
-           throw new sfValidatorError($this, 'Bad captcha response');
+           throw new sfValidatorError($this, 'Bad captcha response '. var_export($captchaStatus, true));
         }
         return $value; //this return is critical!
     }
