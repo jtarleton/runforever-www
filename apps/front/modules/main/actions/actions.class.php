@@ -73,13 +73,14 @@ public function executeRegister(sfWebRequest $request) {
                     }
 
                     $u =new RfUsers;
-
+                    $now = time();
                     $u->setUsername($request->getParameter('username'));
                     $hashpass = Hashlib::create_hash($request->getParameter('userpass'));
                     $u->setUserpass($hashpass);
                     $u->setEmail($request->getParameter('email'));
                       $u->setIp($ipAddress);
                     $u->setVerificationToken($token);
+                     $u->setVerificationTokenTs($now);
                     $u->setIsVerified(0);
                     $u->save();
                   
