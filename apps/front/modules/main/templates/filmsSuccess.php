@@ -1,5 +1,4 @@
 
-<div class="container clearfix mt-100 mb-20">
  <h2><span><?php echo link_to('Home','@homepage'); ?> | Films
  </span></h2>
 
@@ -10,4 +9,3 @@
 <b><?php echo $film->getFilmTitle(); ?></b><br/ >
 </div></div>
 <?php endforeach; ?>
-</div>

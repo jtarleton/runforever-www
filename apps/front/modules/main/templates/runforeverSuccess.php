@@ -1,8 +1,7 @@
 
-<div class="container clearfix mt-100 mb-20">
+
       <h2><span>What's New</span></h2>
       
-	<div class="row">
 
 <?php foreach($posts as $post): ?>
 
@@ -38,8 +37,4 @@ echo '<i>Updated on: '. date('m/d/Y g:i:s a', strtotime($post->getCreatedOn())).
 
 
 	<?php endforeach; ?>
-
-      </div>
-      </div><!-- /.container -->
-
 

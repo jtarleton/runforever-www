@@ -17,7 +17,7 @@
     <?php include_metas() ?>
     <?php include_title() ?>
 
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="http://www.runforever.co/images/favicon.ico" />
 
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
@@ -36,7 +36,7 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
   
     <script src="js/chart.js"></script>
-    <script type="text/javascript" src="js/datatables.js"></script>
+    <script type="text/javascript" src="http://www.runforever.co/js/datatables.js"></script>
 
 
   </head>
@@ -89,16 +89,8 @@
 
         <!-- Sidebar -->
           <section id="sidebar">
-              
 
-            <!-- About -->
-              <section class="blurb">
-                <h2>About</h2>
-                <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
-                <ul class="actions">
-                  <li><a href="#" class="button">Learn More</a></li>
-                </ul>
-              </section>
+
 
             <!-- Footer -->
               <section id="footer">

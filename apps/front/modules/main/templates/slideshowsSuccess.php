@@ -1,4 +1,4 @@
-<div class="container clearfix mt-100 mb-20">
+
  <h2><span><?php echo link_to('Home','@homepage'); ?> | Slideshows
  </span></h2>
 

@@ -1,5 +1,4 @@
 
-<div class="container clearfix mt-100 mb-20">
       <h2><span>Gear</span></h2>
       <div class="c12 row">
 <p>Gear reviews...</p>      
@@ -22,6 +21,5 @@
         </div>
       </div>
 	<?php endforeach; ?>
-      </div><!-- /.container -->
-
+     
 

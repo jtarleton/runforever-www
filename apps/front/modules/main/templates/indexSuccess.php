@@ -421,8 +421,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                 <li><a href="" class="disabled button big previous">Previous Page</a></li>
                 <li><a href="#" class="button big next">Next Page</a></li>
               </ul>
-
-          </div>
+<!--
+          </div> -->
 
 
 
