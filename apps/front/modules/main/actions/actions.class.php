@@ -81,6 +81,7 @@ public function executeRegister(sfWebRequest $request) {
                       $u->setIp($ipAddress);
                     $u->setVerificationToken($token);
                      $u->setVerificationTokenTs($now);
+                     $u->setCreated($now);
                     $u->setIsVerified(0);
                     $u->save();
                   
