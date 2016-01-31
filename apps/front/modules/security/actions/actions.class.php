@@ -36,14 +36,18 @@ class securityActions extends sfActions
 		$now = time();
 		$expiredDiff = $now  - $u->getVerificationTokenTs();
 		$expiredInvite = ($expiredDiff > 1800 ) ? true : false;
-		
-		if($token === $usertoken && $u instanceof RfUsers && !$expiredInvite) {
+		$alreadyVerified = !empty($u->isVerified()) ? true : false;
+		if($token === $usertoken && $u instanceof RfUsers && !$expiredInvite && !$alreadyVerified) {
 			$u->setIsVerified(1);
 			$u->save();
 			$this->getUser()->setFlash('error','Your account has been successfully activated.');
 			$this->getUser()->setAuthenticated(true);
 						$this->redirect('main/index'); //Login succeeded!
-		} elseif($expiredInvite) {
+		} elseif($alreadyVerified) {
+			$this->getUser()->setFlash('error','This account has already been verified.');
+			$this->getUser()->setAuthenticated(false);
+
+		}elseif($expiredInvite && !$alreadyVerified) {
 						$this->getUser()->setFlash('error','The invitation to activate this account has expired. Please submit a new registration request.');
 			$this->getUser()->setAuthenticated(false);	
 		}
