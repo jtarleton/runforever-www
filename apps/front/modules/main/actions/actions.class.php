@@ -38,6 +38,12 @@ $this->films = RfInspirationalMoviesTable::getInstance()->findAll();
 
 
 public function executeRegister(sfWebRequest $request) {
+
+    $user = $this->getUser();
+
+    if($user->isAuthenticated()) {
+      $this->forward('main','index');
+    }
     $this->form = new RfRegistrationForm;
 
 
@@ -94,7 +100,7 @@ public function executeRegister(sfWebRequest $request) {
             // Send
             mail($request->getParameter('email'), 'Run Forever Registration', $message);
       
-              $user = $this->getUser();
+              
               $user->setFlash('notice','Thanks! Your registration invitation has been sent.  Please check your email to verify the account.');
 
             $this->redirect('main/index');
