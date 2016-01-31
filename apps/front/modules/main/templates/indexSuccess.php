@@ -32,7 +32,7 @@
                   </div>
                   <div class="meta">
                     <time class="published" datetime="2015-11-01">November 1, 2015</time>
-                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
                   </div>
                 </header>
                 <a href="#" class="image featured">	<img src="<?php echo $post->getImgSrc(); ?>" alt="" /></a>
@@ -58,10 +58,10 @@
                   </div>
                   <div class="meta">
                     <time class="published" datetime="2015-10-25">October 25, 2015</time>
-                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
                   </div>
                 </header>
-                <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="http://www.runforever.co/images/pic02.jpg" alt="" /></a>
                 <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper.</p>
                 <footer>
                   <ul class="actions">
@@ -84,10 +84,10 @@
                   </div>
                   <div class="meta">
                     <time class="published" datetime="2015-10-22">October 22, 2015</time>
-                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
                   </div>
                 </header>
-                <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="http://www.runforever.co/images/pic03.jpg" alt="" /></a>
                 <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis suscipit. Quisque vestibulum rhoncus ligula.</p>
                 <footer>
                   <ul class="actions">
@@ -111,7 +111,7 @@
                   </div>
                   <div class="meta">
                     <time class="published" datetime="2015-10-18">October 18, 2015</time>
-                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
                   </div>
                 </header>
 
@@ -396,21 +396,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                   <h4>Fit</h4>
                   <div class="box alt">
                     <div class="row uniform">
-                      <div class="12u$"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-                      <div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-                      <div class="4u"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-                      <div class="4u$"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-                      <div class="4u"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-                      <div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-                      <div class="4u$"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-                      <div class="4u"><span class="image fit"><img src="images/pic05.jpg" alt="" /></span></div>
-                      <div class="4u"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-                      <div class="4u$"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+                      <div class="12u$"><span class="image fit"><img src="http://www.runforever.co/images/pic02.jpg" alt="" /></span></div>
+                      <div class="4u"><span class="image fit"><img src="http://www.runforever.co/images/pic04.jpg" alt="" /></span></div>
+                      <div class="4u"><span class="image fit"><img src="http://www.runforever.co/images/pic05.jpg" alt="" /></span></div>
+                      <div class="4u$"><span class="image fit"><img src="http://www.runforever.co/images/pic06.jpg" alt="" /></span></div>
+                      <div class="4u"><span class="image fit"><img src="http://www.runforever.co/images/pic06.jpg" alt="" /></span></div>
+                      <div class="4u"><span class="image fit"><img src="http://www.runforever.co/images/pic04.jpg" alt="" /></span></div>
+                      <div class="4u$"><span class="image fit"><img src="http://www.runforever.co/images/pic05.jpg" alt="" /></span></div>
+                      <div class="4u"><span class="image fit"><img src="http://www.runforever.co/images/pic05.jpg" alt="" /></span></div>
+                      <div class="4u"><span class="image fit"><img src="http://www.runforever.co/images/pic06.jpg" alt="" /></span></div>
+                      <div class="4u$"><span class="image fit"><img src="http://www.runforever.co/images/pic04.jpg" alt="" /></span></div>
                     </div>
                   </div>
                   <h4>Left &amp; Right</h4>
-                  <p><span class="image left"><img src="images/pic07.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-                  <p><span class="image right"><img src="images/pic04.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+                  <p><span class="image left"><img src="http://www.runforever.co/images/pic07.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+                  <p><span class="image right"><img src="http://www.runforever.co/images/pic04.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
                 </section>
 
               </article>
