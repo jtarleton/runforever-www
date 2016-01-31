@@ -51,10 +51,15 @@ class genFilter extends sfFilter
         /*
         * Authentication
         */
-
+        $regLandingPage = false;
     	if( ! $usr->isAuthenticated() )
     	{
-        	if( $module != 'security'  )
+
+            if( ($module == 'main' && $action == 'register') || ($module == 'security' && $action == 'verify') ) {
+                $regLandingPage = true;
+            }
+
+        	if( $module != 'security'  && !$regLandingPage)
         	{
 	        	// If module is 'ajax', we have a special stop point
 
