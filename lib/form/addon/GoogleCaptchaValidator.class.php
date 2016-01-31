@@ -49,7 +49,7 @@ class GoogleCaptchaValidator extends sfValidatorBase
 
 
         if($captchaOK!==true){
-           throw new sfValidatorError($this, "Bad captcha response: $value ". var_export($captchaStatus, true));
+           throw new sfValidatorError($this, "Bad captcha response: ". var_export($value, true) .' '. var_export($captchaStatus, true));
         }
         return $value; //this return is critical!
     }
