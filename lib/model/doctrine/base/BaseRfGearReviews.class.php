@@ -13,16 +13,16 @@ Doctrine_Manager::getInstance()->bindComponent('RfGearReviews', 'doctrine');
  * @property string $review_text
  * @property float $star_rating
  * 
- * @method integer       getId()                  Returns the current record's "id" value
- * @method string        getProduct()             Returns the current record's "product" value
- * @method string        getProductDescription()  Returns the current record's "product_description" value
- * @method string        getReviewText()          Returns the current record's "review_text" value
- * @method float         getStarRating()          Returns the current record's "star_rating" value
- * @method RfGearReviews setId()                  Sets the current record's "id" value
- * @method RfGearReviews setProduct()             Sets the current record's "product" value
- * @method RfGearReviews setProductDescription()  Sets the current record's "product_description" value
- * @method RfGearReviews setReviewText()          Sets the current record's "review_text" value
- * @method RfGearReviews setStarRating()          Sets the current record's "star_rating" value
+ * @method integer       get()                    Returns the current record's "id" value
+ * @method string        get()                    Returns the current record's "product" value
+ * @method string        get()                    Returns the current record's "product_description" value
+ * @method string        get()                    Returns the current record's "review_text" value
+ * @method float         get()                    Returns the current record's "star_rating" value
+ * @method RfGearReviews set()                    Sets the current record's "id" value
+ * @method RfGearReviews set()                    Sets the current record's "product" value
+ * @method RfGearReviews set()                    Sets the current record's "product_description" value
+ * @method RfGearReviews set()                    Sets the current record's "review_text" value
+ * @method RfGearReviews set()                    Sets the current record's "star_rating" value
  * 
  * @package    runforever
  * @subpackage model

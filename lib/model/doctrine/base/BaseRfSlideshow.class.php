@@ -13,16 +13,16 @@ Doctrine_Manager::getInstance()->bindComponent('RfSlideshow', 'doctrine');
  * @property string $cover_img_url
  * @property Doctrine_Collection $RfSlides
  * 
- * @method integer             getId()              Returns the current record's "id" value
- * @method string              getSlideshowTitle()  Returns the current record's "slideshow_title" value
- * @method string              getIntroText()       Returns the current record's "intro_text" value
- * @method string              getCoverImgUrl()     Returns the current record's "cover_img_url" value
- * @method Doctrine_Collection getRfSlides()        Returns the current record's "RfSlides" collection
- * @method RfSlideshow         setId()              Sets the current record's "id" value
- * @method RfSlideshow         setSlideshowTitle()  Sets the current record's "slideshow_title" value
- * @method RfSlideshow         setIntroText()       Sets the current record's "intro_text" value
- * @method RfSlideshow         setCoverImgUrl()     Sets the current record's "cover_img_url" value
- * @method RfSlideshow         setRfSlides()        Sets the current record's "RfSlides" collection
+ * @method integer             get()                Returns the current record's "id" value
+ * @method string              get()                Returns the current record's "slideshow_title" value
+ * @method string              get()                Returns the current record's "intro_text" value
+ * @method string              get()                Returns the current record's "cover_img_url" value
+ * @method Doctrine_Collection get()                Returns the current record's "RfSlides" collection
+ * @method RfSlideshow         set()                Sets the current record's "id" value
+ * @method RfSlideshow         set()                Sets the current record's "slideshow_title" value
+ * @method RfSlideshow         set()                Sets the current record's "intro_text" value
+ * @method RfSlideshow         set()                Sets the current record's "cover_img_url" value
+ * @method RfSlideshow         set()                Sets the current record's "RfSlides" collection
  * 
  * @package    runforever
  * @subpackage model

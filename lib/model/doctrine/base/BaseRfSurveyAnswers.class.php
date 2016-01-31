@@ -15,20 +15,20 @@ Doctrine_Manager::getInstance()->bindComponent('RfSurveyAnswers', 'doctrine');
  * @property timestamp $updated_on
  * @property RfSurveyQuestions $RfSurveyQuestions
  * 
- * @method integer           getId()                Returns the current record's "id" value
- * @method integer           getQuestionId()        Returns the current record's "question_id" value
- * @method string            getAnsText()           Returns the current record's "ans_text" value
- * @method integer           getUid()               Returns the current record's "uid" value
- * @method timestamp         getCreatedOn()         Returns the current record's "created_on" value
- * @method timestamp         getUpdatedOn()         Returns the current record's "updated_on" value
- * @method RfSurveyQuestions getRfSurveyQuestions() Returns the current record's "RfSurveyQuestions" value
- * @method RfSurveyAnswers   setId()                Sets the current record's "id" value
- * @method RfSurveyAnswers   setQuestionId()        Sets the current record's "question_id" value
- * @method RfSurveyAnswers   setAnsText()           Sets the current record's "ans_text" value
- * @method RfSurveyAnswers   setUid()               Sets the current record's "uid" value
- * @method RfSurveyAnswers   setCreatedOn()         Sets the current record's "created_on" value
- * @method RfSurveyAnswers   setUpdatedOn()         Sets the current record's "updated_on" value
- * @method RfSurveyAnswers   setRfSurveyQuestions() Sets the current record's "RfSurveyQuestions" value
+ * @method integer           get()                  Returns the current record's "id" value
+ * @method integer           get()                  Returns the current record's "question_id" value
+ * @method string            get()                  Returns the current record's "ans_text" value
+ * @method integer           get()                  Returns the current record's "uid" value
+ * @method timestamp         get()                  Returns the current record's "created_on" value
+ * @method timestamp         get()                  Returns the current record's "updated_on" value
+ * @method RfSurveyQuestions get()                  Returns the current record's "RfSurveyQuestions" value
+ * @method RfSurveyAnswers   set()                  Sets the current record's "id" value
+ * @method RfSurveyAnswers   set()                  Sets the current record's "question_id" value
+ * @method RfSurveyAnswers   set()                  Sets the current record's "ans_text" value
+ * @method RfSurveyAnswers   set()                  Sets the current record's "uid" value
+ * @method RfSurveyAnswers   set()                  Sets the current record's "created_on" value
+ * @method RfSurveyAnswers   set()                  Sets the current record's "updated_on" value
+ * @method RfSurveyAnswers   set()                  Sets the current record's "RfSurveyQuestions" value
  * 
  * @package    runforever
  * @subpackage model

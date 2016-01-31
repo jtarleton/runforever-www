@@ -11,12 +11,12 @@ Doctrine_Manager::getInstance()->bindComponent('RfSurvey', 'doctrine');
  * @property string $name
  * @property Doctrine_Collection $RfSurveyQuestions
  * 
- * @method integer             getId()                Returns the current record's "id" value
- * @method string              getName()              Returns the current record's "name" value
- * @method Doctrine_Collection getRfSurveyQuestions() Returns the current record's "RfSurveyQuestions" collection
- * @method RfSurvey            setId()                Sets the current record's "id" value
- * @method RfSurvey            setName()              Sets the current record's "name" value
- * @method RfSurvey            setRfSurveyQuestions() Sets the current record's "RfSurveyQuestions" collection
+ * @method integer             get()                  Returns the current record's "id" value
+ * @method string              get()                  Returns the current record's "name" value
+ * @method Doctrine_Collection get()                  Returns the current record's "RfSurveyQuestions" collection
+ * @method RfSurvey            set()                  Sets the current record's "id" value
+ * @method RfSurvey            set()                  Sets the current record's "name" value
+ * @method RfSurvey            set()                  Sets the current record's "RfSurveyQuestions" collection
  * 
  * @package    runforever
  * @subpackage model

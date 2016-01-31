@@ -13,16 +13,16 @@ Doctrine_Manager::getInstance()->bindComponent('RfSurveyQuestions', 'doctrine');
  * @property RfSurvey $RfSurvey
  * @property Doctrine_Collection $RfSurveyAnswers
  * 
- * @method integer             getId()              Returns the current record's "id" value
- * @method integer             getSurveyId()        Returns the current record's "survey_id" value
- * @method string              getQuestionText()    Returns the current record's "question_text" value
- * @method RfSurvey            getRfSurvey()        Returns the current record's "RfSurvey" value
- * @method Doctrine_Collection getRfSurveyAnswers() Returns the current record's "RfSurveyAnswers" collection
- * @method RfSurveyQuestions   setId()              Sets the current record's "id" value
- * @method RfSurveyQuestions   setSurveyId()        Sets the current record's "survey_id" value
- * @method RfSurveyQuestions   setQuestionText()    Sets the current record's "question_text" value
- * @method RfSurveyQuestions   setRfSurvey()        Sets the current record's "RfSurvey" value
- * @method RfSurveyQuestions   setRfSurveyAnswers() Sets the current record's "RfSurveyAnswers" collection
+ * @method integer             get()                Returns the current record's "id" value
+ * @method integer             get()                Returns the current record's "survey_id" value
+ * @method string              get()                Returns the current record's "question_text" value
+ * @method RfSurvey            get()                Returns the current record's "RfSurvey" value
+ * @method Doctrine_Collection get()                Returns the current record's "RfSurveyAnswers" collection
+ * @method RfSurveyQuestions   set()                Sets the current record's "id" value
+ * @method RfSurveyQuestions   set()                Sets the current record's "survey_id" value
+ * @method RfSurveyQuestions   set()                Sets the current record's "question_text" value
+ * @method RfSurveyQuestions   set()                Sets the current record's "RfSurvey" value
+ * @method RfSurveyQuestions   set()                Sets the current record's "RfSurveyAnswers" collection
  * 
  * @package    runforever
  * @subpackage model

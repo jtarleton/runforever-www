@@ -5,6 +5,9 @@
 homepage:
   url:   /
   param: { module: main, action: index }
+frontdoor:
+  url: /frontdoor
+  param: { module: security, action: login }
 register:
   url: /register
   param: { module: main, action: register }

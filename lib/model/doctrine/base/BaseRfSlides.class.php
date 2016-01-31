@@ -16,22 +16,22 @@ Doctrine_Manager::getInstance()->bindComponent('RfSlides', 'doctrine');
  * @property string $img_url
  * @property RfSlideshow $RfSlideshow
  * 
- * @method integer     getId()            Returns the current record's "id" value
- * @method integer     getPosition()      Returns the current record's "position" value
- * @method integer     getSlideshowId()   Returns the current record's "slideshow_id" value
- * @method string      getSlideTitle()    Returns the current record's "slide_title" value
- * @method string      getSlideCaption()  Returns the current record's "slide_caption" value
- * @method string      getSlideBody()     Returns the current record's "slide_body" value
- * @method string      getImgUrl()        Returns the current record's "img_url" value
- * @method RfSlideshow getRfSlideshow()   Returns the current record's "RfSlideshow" value
- * @method RfSlides    setId()            Sets the current record's "id" value
- * @method RfSlides    setPosition()      Sets the current record's "position" value
- * @method RfSlides    setSlideshowId()   Sets the current record's "slideshow_id" value
- * @method RfSlides    setSlideTitle()    Sets the current record's "slide_title" value
- * @method RfSlides    setSlideCaption()  Sets the current record's "slide_caption" value
- * @method RfSlides    setSlideBody()     Sets the current record's "slide_body" value
- * @method RfSlides    setImgUrl()        Sets the current record's "img_url" value
- * @method RfSlides    setRfSlideshow()   Sets the current record's "RfSlideshow" value
+ * @method integer     get()              Returns the current record's "id" value
+ * @method integer     get()              Returns the current record's "position" value
+ * @method integer     get()              Returns the current record's "slideshow_id" value
+ * @method string      get()              Returns the current record's "slide_title" value
+ * @method string      get()              Returns the current record's "slide_caption" value
+ * @method string      get()              Returns the current record's "slide_body" value
+ * @method string      get()              Returns the current record's "img_url" value
+ * @method RfSlideshow get()              Returns the current record's "RfSlideshow" value
+ * @method RfSlides    set()              Sets the current record's "id" value
+ * @method RfSlides    set()              Sets the current record's "position" value
+ * @method RfSlides    set()              Sets the current record's "slideshow_id" value
+ * @method RfSlides    set()              Sets the current record's "slide_title" value
+ * @method RfSlides    set()              Sets the current record's "slide_caption" value
+ * @method RfSlides    set()              Sets the current record's "slide_body" value
+ * @method RfSlides    set()              Sets the current record's "img_url" value
+ * @method RfSlides    set()              Sets the current record's "RfSlideshow" value
  * 
  * @package    runforever
  * @subpackage model

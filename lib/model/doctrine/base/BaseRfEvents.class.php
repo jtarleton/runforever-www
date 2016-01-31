@@ -20,30 +20,30 @@ Doctrine_Manager::getInstance()->bindComponent('RfEvents', 'doctrine');
  * @property integer $last_year_participant_count
  * @property string $website_url
  * 
- * @method integer  getId()                          Returns the current record's "id" value
- * @method string   getName()                        Returns the current record's "name" value
- * @method string   getRaceType()                    Returns the current record's "race_type" value
- * @method string   getEventType()                   Returns the current record's "event_type" value
- * @method date     getDate()                        Returns the current record's "date" value
- * @method time     getTime()                        Returns the current record's "time" value
- * @method integer  getYear()                        Returns the current record's "year" value
- * @method string   getHostedBy()                    Returns the current record's "hosted_by" value
- * @method string   getCity()                        Returns the current record's "city" value
- * @method string   getState()                       Returns the current record's "state" value
- * @method integer  getLastYearParticipantCount()    Returns the current record's "last_year_participant_count" value
- * @method string   getWebsiteUrl()                  Returns the current record's "website_url" value
- * @method RfEvents setId()                          Sets the current record's "id" value
- * @method RfEvents setName()                        Sets the current record's "name" value
- * @method RfEvents setRaceType()                    Sets the current record's "race_type" value
- * @method RfEvents setEventType()                   Sets the current record's "event_type" value
- * @method RfEvents setDate()                        Sets the current record's "date" value
- * @method RfEvents setTime()                        Sets the current record's "time" value
- * @method RfEvents setYear()                        Sets the current record's "year" value
- * @method RfEvents setHostedBy()                    Sets the current record's "hosted_by" value
- * @method RfEvents setCity()                        Sets the current record's "city" value
- * @method RfEvents setState()                       Sets the current record's "state" value
- * @method RfEvents setLastYearParticipantCount()    Sets the current record's "last_year_participant_count" value
- * @method RfEvents setWebsiteUrl()                  Sets the current record's "website_url" value
+ * @method integer  get()                            Returns the current record's "id" value
+ * @method string   get()                            Returns the current record's "name" value
+ * @method string   get()                            Returns the current record's "race_type" value
+ * @method string   get()                            Returns the current record's "event_type" value
+ * @method date     get()                            Returns the current record's "date" value
+ * @method time     get()                            Returns the current record's "time" value
+ * @method integer  get()                            Returns the current record's "year" value
+ * @method string   get()                            Returns the current record's "hosted_by" value
+ * @method string   get()                            Returns the current record's "city" value
+ * @method string   get()                            Returns the current record's "state" value
+ * @method integer  get()                            Returns the current record's "last_year_participant_count" value
+ * @method string   get()                            Returns the current record's "website_url" value
+ * @method RfEvents set()                            Sets the current record's "id" value
+ * @method RfEvents set()                            Sets the current record's "name" value
+ * @method RfEvents set()                            Sets the current record's "race_type" value
+ * @method RfEvents set()                            Sets the current record's "event_type" value
+ * @method RfEvents set()                            Sets the current record's "date" value
+ * @method RfEvents set()                            Sets the current record's "time" value
+ * @method RfEvents set()                            Sets the current record's "year" value
+ * @method RfEvents set()                            Sets the current record's "hosted_by" value
+ * @method RfEvents set()                            Sets the current record's "city" value
+ * @method RfEvents set()                            Sets the current record's "state" value
+ * @method RfEvents set()                            Sets the current record's "last_year_participant_count" value
+ * @method RfEvents set()                            Sets the current record's "website_url" value
  * 
  * @package    runforever
  * @subpackage model
