@@ -38,73 +38,74 @@ $this->films = RfInspirationalMoviesTable::getInstance()->findAll();
 
 
 public function executeRegister(sfWebRequest $request) {
-$this->form = new RfRegistrationForm;
+    $this->form = new RfRegistrationForm;
 
 
-if ($request->isMethod('post'))
+    if ($request->isMethod('post'))
     {
       $this->form->bind(array('email'=>$request->getParameter('email'),
-	'username'=>$request->getParameter('username'),
+        	'username'=>$request->getParameter('username'),
 
-'userpass'=>$request->getParameter('userpass')
+        'userpass'=>$request->getParameter('userpass')
 
 
-	));
+        	));
       
-      if ($this->form->isValid())
-      {
-$token = md5($request->getParameter('email').time());
-$activateLink = 'http://www.runforever.co/security/verify?link='.$token;
+          if ($this->form->isValid())
+          {
+            $token = md5($request->getParameter('email').time());
+            $activateLink = 'http://www.runforever.co/security/verify?link='.$token;
 
 
 
-if(!empty($request->getParameter('username'))){
+            if(!empty($request->getParameter('username'))){
 
 
 
-        $u =new RfUsers;
+                    $u =new RfUsers;
 
-        $u->setUsername($request->getParameter('username'));
-        $hashpass = Hashlib::create_hash($request->getParameter('userpass'));
-        $u->setUserpass($hashpass);
-        $u->setEmail($request->getParameter('email'));
-        $u->setValidationLink($token);
-        $u->setIsVerified(0);
-        $u->save();
+                    $u->setUsername($request->getParameter('username'));
+                    $hashpass = Hashlib::create_hash($request->getParameter('userpass'));
+                    $u->setUserpass($hashpass);
+                    $u->setEmail($request->getParameter('email'));
+                    $u->setValidationLink($token);
+                    $u->setIsVerified(0);
+                    $u->save();
+                  
+            }
+
+
+            $u =Doctrine_Core::getTable('RfUsers')->findOneBy('username', $values['username']); 
+          
+
+
+    	       // The message
+            $message = "Hi there!\r\nThis is to confirm your request for an account on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete.\r\n\r\n$activateLink\r\n\r\nIn the event this registration was initiated in error, please let us know.\r\nThe RunForever Team";
+
+            // In case any of our lines are larger than 70 characters, we should use wordwrap()
+            $message = wordwrap($message, 70, "\r\n");
+
+            // Send
+            mail($request->getParameter('email'), 'Run Forever Registration', $message);
       
+              $user = $this->getUser();
+              $user->setFlash('success','');
+
+            $this->redirect('main/index');
+          } 
+          else {
+
+            		$user = $this->getUser();
+            		$user->setFlash('error','Something went wrong!');
+            		
+
+            	foreach($this->form->getErrorSchema()->getErrors() as $key => $error)
+              {
+                echo '<p>' . $key . ': ' . $error . '</p>';
+              }
 
 
-
-        $u =Doctrine_Core::getTable('RfUsers')->findOneBy('username', $values['username']); 
-      
-
-
-	// The message
-$message = "Hi there!\r\nThis is to confirm your request for an account on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete.\r\n\r\n$activateLink\r\n\r\nIn the event this registration was initiated in error, please let us know.\r\nThe RunForever Team";
-
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-$message = wordwrap($message, 70, "\r\n");
-
-// Send
-mail($request->getParameter('email'), 'Run Forever Registration', $message);
-  
-    $user = $this->getUser();
-    $user->setFlash('success','');
-
-        $this->redirect('main/index');
-      } else {
-
-		$user = $this->getUser();
-		$user->setFlash('error','Something went wrong!');
-		
-
-	foreach($this->form->getErrorSchema()->getErrors() as $key => $error)
-  {
-    echo '<p>' . $key . ': ' . $error . '</p>';
-  }
-
-
-		}
+    		}
     }
 }
 
