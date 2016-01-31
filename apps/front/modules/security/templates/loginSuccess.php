@@ -7,4 +7,10 @@
 
 <input type="submit" name="submit" value="login"></input>
 </form>
+<br />
+
+Please <a href="http://www.runforever.co/register">Register for an account</a> | 
+<a href="http://www.runforever.co/security/forgotpassword">Forget password?</a>
+
+
 </div></div>
