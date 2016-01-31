@@ -82,19 +82,9 @@ class securityActions extends sfActions
 			      )
 			);
 
-
-
-
-
-
-
     if ($request->isMethod('post'))
     {
-      $this->form->bind(array('email'=>$request->getParameter('email'),
-        	
-
-
-        	));
+      $this->form->bind(array('email'=>$request->getParameter('email')));
       
           if ($this->form->isValid())
           {
@@ -179,7 +169,7 @@ class securityActions extends sfActions
 
 
 
-
+}
 
 
 	}
