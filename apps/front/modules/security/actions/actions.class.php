@@ -45,7 +45,7 @@ class securityActions extends sfActions
 			$u->save();
 			$this->getUser()->setFlash('notice','Your account has been successfully activated.  You may now login.');
 			$this->getUser()->setAuthenticated(false);
-						$this->redirect('security/login'); /
+						$this->redirect('security/login'); 
 		} elseif($alreadyVerified) {
 			$this->getUser()->setFlash('error','This account has already been verified.');
 			$this->getUser()->setAuthenticated(false);
