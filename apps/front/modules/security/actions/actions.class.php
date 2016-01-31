@@ -101,7 +101,7 @@ class securityActions extends sfActions
                     $u =Doctrine_Core::getTable('RfUsers')->findOneBy('email', $request->getParameter('email')); 
           
                     if(empty($u->getIsVerified())) {
-                    	    $u->setFlash('notice','Sorry, this feature is only available to activated accounts. Please activate the account from the link in the invitation you received or submit a new registration.');
+                    	    $this->getUser()->setFlash('notice','Sorry, this feature is only available to activated accounts. Please activate the account from the link in the invitation you received or submit a new registration.');
 
             				$this->redirect('main/register');
 
