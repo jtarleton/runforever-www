@@ -43,29 +43,31 @@ $this->form = new RfRegistrationForm;
 
 if ($request->isMethod('post'))
     {
-      $this->form->bind(array('field1'=>$request->getParameter('field1'),
-	'field2'=>$request->getParameter('field2'),
+      $this->form->bind(array('email'=>$request->getParameter('email'),
+	'username'=>$request->getParameter('username'),
 
-
-'subject'=>$request->getParameter('subject'),
-'message'=>$request->getParameter('message')
+'userpass'=>$request->getParameter('userpass')
 
 
 	));
       
       if ($this->form->isValid())
       {
-
-
+$token = md5($request->getParameter('email').time());
+$activateLink = 'http://www.runforever.co/security/verify?link='.$token;
 	// The message
-$message = "This email has been registered for an account on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete. \r\nIn the event this registration was initiated in error, please let us know.\r\nThe RunForever Team";
+$message = "This email was submitted for a new account registration on Run Forever. Please click on the following link to activate your account, or this activation link will expire and the registation process will not complete. \r\n \t$activateLink \r\nIn the event this registration was initiated in error, please let us know.\r\n- The RunForever Team";
 
 // In case any of our lines are larger than 70 characters, we should use wordwrap()
 $message = wordwrap($message, 70, "\r\n");
 
 // Send
-mail('jamestarleton@gmail.com', 'Registration Successful', $message);
-        $this->redirect('home/index');
+mail($request->getParameter('email'), 'Run Forever Registration', $message);
+  
+    $user = $this->getUser();
+    $user->setFlash('success','');
+
+        $this->redirect('main/index');
       } else {
 
 		$user = $this->getUser();
