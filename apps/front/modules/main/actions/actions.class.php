@@ -103,7 +103,7 @@ public function executeRegister(sfWebRequest $request) {
               
               $user->setFlash('notice','Thanks! Your registration invitation has been sent.  Please check your email to verify the account.');
 
-            $this->redirect('main/index');
+            $this->redirect('security/invited');
           } 
           else {
 

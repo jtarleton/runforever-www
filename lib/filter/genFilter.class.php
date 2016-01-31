@@ -55,7 +55,10 @@ class genFilter extends sfFilter
     	if( ! $usr->isAuthenticated() )
     	{
 
-            if( ($module == 'main' && $action == 'register') || ($module == 'security' && $action == 'verify') ) {
+            if( ($module == 'main' && $action == 'register') 
+                || ($module == 'security' && $action == 'verify') 
+                || ($module == 'security' && $action == 'invited')
+                ) {
                 $regLandingPage = true;
             }
 

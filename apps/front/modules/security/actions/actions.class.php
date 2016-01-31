@@ -17,6 +17,9 @@ class securityActions extends sfActions
 	{
 	}
 
+		public function executeInvited( sfWebRequest $request )
+	{
+	}
 
 	public function executeLogout( sfWebRequest $request )
 	{
