@@ -123,7 +123,11 @@ public function executeRegister(sfWebRequest $request) {
 }
 
 public function executeLogin(sfWebRequest $request) {
+   $user = $this->getUser();
 
+ if($user->isAuthenticated()) {
+      $this->forward('main','index');
+    }
 	$this->form = new RfLoginForm;
 
  	if ($request->isMethod('post'))

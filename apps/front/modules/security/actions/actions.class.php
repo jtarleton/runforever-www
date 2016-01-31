@@ -43,9 +43,9 @@ class securityActions extends sfActions
 		if($token === $usertoken && $u instanceof RfUsers && !$expiredInvite && !$alreadyVerified) {
 			$u->setIsVerified(1);
 			$u->save();
-			$this->getUser()->setFlash('error','Your account has been successfully activated.');
-			$this->getUser()->setAuthenticated(true);
-						$this->redirect('main/index'); //Login succeeded!
+			$this->getUser()->setFlash('notice','Your account has been successfully activated.  You may now login.');
+			$this->getUser()->setAuthenticated(false);
+						$this->redirect('security/login'); /
 		} elseif($alreadyVerified) {
 			$this->getUser()->setFlash('error','This account has already been verified.');
 			$this->getUser()->setAuthenticated(false);
