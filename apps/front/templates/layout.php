@@ -20,7 +20,9 @@
     <link href="http://www.runforever.co/css/style.css" rel="stylesheet">
 <link href="http://www.runforever.co/css/datatables.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+  
     <script src="js/chart.js"></script>
     <script type="text/javascript" src="js/datatables.js"></script>
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->

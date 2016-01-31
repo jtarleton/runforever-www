@@ -49,14 +49,15 @@ public function executeRegister(sfWebRequest $request) {
 
     if ($request->isMethod('post'))
     {
-      $this->form->bind(array('email'=>$request->getParameter('email'),
-        	'username'=>$request->getParameter('username'),
-
-        'userpass'=>$request->getParameter('userpass')
-
-
-        	));
-      
+      $this->form->bind(
+        array('email'=>$request->getParameter('email'),
+          'username'=>$request->getParameter('username'),
+          'userpass'=>$request->getParameter('userpass')
+          'g-recaptcha-response'=>$request->getParameter('g-recaptcha-response')
+        )
+      );
+  
+     
           if ($this->form->isValid())
           {
             $token = md5($request->getParameter('email').time());
@@ -64,14 +65,10 @@ public function executeRegister(sfWebRequest $request) {
 
 
 
+
+
+
             if(!empty($request->getParameter('username'))){
-
-              
-              $ipAddress = $_SERVER['REMOTE_ADDR'];
-                  if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
-                        $ipAddress = array_pop(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
-                    }
-
                     $u =new RfUsers;
                     $now = time();
                     $u->setUsername($request->getParameter('username'));

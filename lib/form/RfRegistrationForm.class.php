@@ -12,6 +12,8 @@ $this->setWidgets(array(
     'username'    => new sfWidgetFormInputText(),
     'email'   => new sfWidgetFormInputText(array('default' => 'me@example.com')),
         'userpass'   => new sfWidgetFormInputText(array('default' => '')),
+
+          'g-recaptcha-response'   => new sfWidgetFormInputHidden(),
   ));
 
 
@@ -19,10 +21,12 @@ $this->setValidators(
 	array(
       		'email' => new sfValidatorString(array('required' => true)), 
       		'username' => new sfValidatorString(array('required' => true)),
-		      'userpass'=>new sfValidatorPass
+		      'userpass'=>new sfValidatorPass,
+		        'g-recaptcha-response'   => new sfValidatorPass,
     	)
 );
 
+ $this->mergePostValidator(new GoogleCaptchaValidator);
 
 
 
