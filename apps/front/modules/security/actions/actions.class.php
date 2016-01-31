@@ -198,7 +198,7 @@ if(!in_array( $_SERVER['GEOIP_ADDR'], $ips) ){
 	
 		$this->form->setWidgets(
 				array(
-			      'username'    => new sfWidgetFormInputText(array('label'=>'Username'), array('default'=>$request->getUsername(), 'placeholder'=>'username','class'=>'form-control')),
+			      'username'    => new sfWidgetFormInputText(array('label'=>'Username'), array('default'=>$request->getParameter('username'), 'placeholder'=>'username','class'=>'form-control')),
 			      'passwd'   => new sfWidgetFormInputPassword(array('label'=>'Password'), array('placeholder'=>'password','class'=>'form-control')) 
 			      )
 			);
