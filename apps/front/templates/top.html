@@ -16,7 +16,7 @@
              
     <li><a href="/running_events">Races & Events</a></li>
 
-<?php if(sfContext::getContext()->getUser()->isAuthenticated() ): ?>
+<?php if(sfContext::getInstance()->getUser()->isAuthenticated() ): ?>
  <li><a href="http://www.runforever.co/security/logout">Logout</a></li>
 <?php else: ?>
   <li><a href="http://www.runforever.co/login">Login</a></li> 
