@@ -34,11 +34,11 @@
                   </div>
                   <div class="meta">
                     <time class="published" datetime="2015-11-01">November 1, 2015</time>
-                    <a href="#" class="author"><span class="name">Jane Doe</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
+                    <a href="#" class="author"><span class="name">Administrator</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
                   </div>
                 </header>
                 <a href="#" class="image featured">	<img src="<?php echo $post->getImgSrc(); ?>" alt="" /></a>
-                <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <p>More content...</p>
                 <footer>
                   <ul class="actions">
                     <li><a href="#" class="button big">Continue Reading</a></li>
@@ -51,7 +51,7 @@
                 </footer>
               </article>
 
-            <!-- Post -->
+            <!-- Post
               <article class="post">
                 <header>
                   <div class="title">
@@ -77,7 +77,7 @@
                 </footer>
               </article>
 
-            <!-- Post -->
+        
               <article class="post">
                 <header>
                   <div class="title">
@@ -103,7 +103,7 @@
                 </footer>
               </article>
 
-            <!-- Post -->
+        -->
             <!--
               <article class="post">
                 <header>
