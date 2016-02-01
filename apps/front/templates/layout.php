@@ -37,6 +37,7 @@
   
     <script src="js/chart.js"></script>
     <script type="text/javascript" src="http://www.runforever.co/js/datatables.js"></script>
+ <script type="text/javascript" src="http://www.runforever.co/js/carousel.js"></script>
 
 
   </head>
