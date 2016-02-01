@@ -1,4 +1,9 @@
+<script>
+jQuery(document).ready(function() {
 
+    jQuery('.carousel-example-generic').carousel();
+});
+</script>
   <article class="post">
                 <header>
                   <div class="title">
