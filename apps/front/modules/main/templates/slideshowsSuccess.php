@@ -1,7 +1,7 @@
 <script>
 jQuery(document).ready(function() {
 
-    jQuery('.carousel-example-generic').carousel();
+    jQuery('#carousel-example-generic').carousel();
 });
 </script>
   <article class="post">
