@@ -57,6 +57,180 @@ ss:
   url: /slideshows
   param: { module: main, action: slideshows } 
 
+rf_gear_reviews:
+  url: /admin/gear
+  param: { module: rf_gear_reviews, action: index }
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfGearReviews
+    module:               rf_gear_reviews
+    prefix_path:          /rf_gear_reviews
+    column:               id
+    with_wildcard_routes: true
+
+rf_recipes:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfRecipes
+    module:               rf_recipes
+    prefix_path:          /rf_recipes
+    column:               id
+    with_wildcard_routes: true
+
+rf_sessions:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfSessions
+    module:               rf_sessions
+    prefix_path:          /rf_sessions
+    column:               id
+    with_wildcard_routes: true
+
+rf_survey_answers:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfSurveyAnswers
+    module:               rf_survey_answers
+    prefix_path:          /rf_survey_answers
+    column:               id
+    with_wildcard_routes: true
+
+rf_survey:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfSurvey
+    module:               rf_survey
+    prefix_path:          /rf_survey
+    column:               id
+    with_wildcard_routes: true
+
+rf_events:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfEvents
+    module:               rf_events
+    prefix_path:          /rf_events
+    column:               id
+    with_wildcard_routes: true
+
+rf_blog_term_relationships:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfBlogTermRelationships
+    module:               rf_blog_term_relationships
+    prefix_path:          /rf_blog_term_relationships
+    column:               id
+    with_wildcard_routes: true
+
+rf_blog_term_taxonomy:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfBlogTermTaxonomy
+    module:               rf_blog_term_taxonomy
+    prefix_path:          /rf_blog_term_taxonomy
+    column:               id
+    with_wildcard_routes: true
+
+rf_blog_terms:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfBlogTerms
+    module:               rf_blog_terms
+    prefix_path:          /rf_blog_terms
+    column:               id
+    with_wildcard_routes: true
+
+rf_films:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfFilms
+    module:               rf_films
+    prefix_path:          /rf_films
+    column:               id
+    with_wildcard_routes: true
+
+rf_slideshow:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfSlideshow
+    module:               rf_slideshow
+    prefix_path:          /rf_slideshow
+    column:               id
+    with_wildcard_routes: true
+
+rf_slides:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfSlides
+    module:               rf_slides
+    prefix_path:          /rf_slides
+    column:               id
+    with_wildcard_routes: true
+
+rf_survey_questions:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfSurveyQuestions
+    module:               rf_survey_questions
+    prefix_path:          /rf_survey_questions
+    column:               id
+    with_wildcard_routes: true
+
+rf_quotes:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfQuotes
+    module:               rf_quotes
+    prefix_path:          /rf_quotes
+    column:               id
+    with_wildcard_routes: true
+
+rf_users:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfUsers
+    module:               rf_users
+    prefix_path:          /rf_users
+    column:               id
+    with_wildcard_routes: true
+
+rf_blog_posts_blogger:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfBlogPosts
+    module:               blogger
+    prefix_path:          /blogger
+    column:               id
+    with_wildcard_routes: true
+
+rf_blog_posts:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                RfBlogPosts
+    module:               rf_blog_posts
+    prefix_path:          /rf_blog_posts
+    column:               id
+    with_wildcard_routes: true
+
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+admin:
+  url: /admin
+  param: { module: menu, action: index }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 # generic rules
 # please, remove them by adding more specific rules
 default_index:

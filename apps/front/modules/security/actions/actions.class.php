@@ -251,8 +251,18 @@ if(!in_array( $_SERVER['GEOIP_ADDR'], $ips) ){
 				  		$usr = new stdClass; //$sfSecUser->isAuthenticated(); //$this->form['user']->getFinalValue();
 				  		$usr->username = $clean['username'];
 				  		$usr->passwd = $clean['passwd'];
-				  		
+				  	
+
+	
 				  		$this->getUser()->setAuthenticated(true);
+
+
+if($usr->username=='jtarleton') {
+$this->getUser()->addCredential('admin');
+}
+
+
+
 						$this->redirect('main/index'); //Login succeeded!
 
 
