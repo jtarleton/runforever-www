@@ -25,9 +25,10 @@ jQuery(document).ready(function() {
       </ol>
       <!-- Carousel items -->
       <div class="carousel-inner">
-        <div class="active item">…</div>
-        <div class="item">…</div>
-        <div class="item">…</div>
+        <div class="active item"><img src="http://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania"></div>
+        <div class="item"><img src="http://www.w3schools.com/bootstrap/img_chania2.jpg" alt="Chania"></div>
+        <div class="item"><img src="http://www.w3schools.com/bootstrap/img_flower.jpg" alt="Chania"></div>
+           <div class="item"><img src="http://www.w3schools.com/bootstrap/img_flower2.jpg" alt="Chania"></div>
       </div>
       <!-- Carousel nav -->
       <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
