@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="http://www.runforever.co/images/favicon.ico" />
 
     <?php include_stylesheets() ?>
-    <?php include_javascripts() ?>
+    <?php //include_javascripts() ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,7 +116,7 @@
       <script src="http://www.runforever.co/assets/js/skel.min.js"></script>
       
 
-      <script src="http://www.runforever.co/assets/js/util.js"></script>
+      <script src="http://www.runforever.co/assets/js/util.js"></script> -->
       
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <!-- 
