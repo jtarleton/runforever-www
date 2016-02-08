@@ -42,7 +42,7 @@ abstract class sfOutputEscaperGetterDecorator extends sfOutputEscaper
    *
    * @return mixed The escaped value
    */
-  public function get($key, $escapingMethod = null)
+  public function get($key=null, $escapingMethod = null)
   {
     if (!$escapingMethod)
     {

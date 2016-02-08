@@ -756,6 +756,13 @@ RfUsers:
       primary: false
       notnull: false
       autoincrement: false
+    email:
+      type: string(200)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     ip:
       type: string(200)
       fixed: false
@@ -770,10 +777,32 @@ RfUsers:
       primary: false
       notnull: false
       autoincrement: false
+    verification_token_ts:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     is_verified:
       type: string(200)
       fixed: false
       unsigned: false
       primary: false
       notnull: false
+      autoincrement: false
+    created:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    updated:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: '0000-00-00 00:00:00'
+      notnull: true
       autoincrement: false

@@ -35,8 +35,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
   
-    <script src="js/chart.js"></script>
-    <script type="text/javascript" src="http://www.runforever.co/js/datatables.js"></script>
+<!--     <script src="js/chart.js"></script>
+    <script type="text/javascript" src="http://www.runforever.co/js/datatables.js"></script> -->
  <script type="text/javascript" src="http://www.runforever.co/js/carousel.js"></script>
 
 
@@ -109,9 +109,9 @@
 
       </div>
 
-    <!-- Scripts -->
+    <!-- Scripts 
       <script src="http://www.runforever.co/assets/js/jquery.min.js"></script>
-      <script src="http://www.runforever.co/assets/js/skel.min.js"></script>
+      --><script src="http://www.runforever.co/assets/js/skel.min.js"></script>
       <script src="http://www.runforever.co/assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="http://www.runforever.co/assets/js/main.js"></script>

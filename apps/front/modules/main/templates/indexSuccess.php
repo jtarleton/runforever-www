@@ -6,7 +6,6 @@
 
 
 
-
  
 
 
@@ -21,9 +20,6 @@
                     <div>
                         <p><?php echo nl2br($post->getBody()); ?></p>
 
-						<p>
-						Read latest blog posts <a href="http://www.runforever.co/news">here</a>.
-						</p>
 
 
 	
