@@ -1,8 +1,13 @@
 <script type="text/javascript">
 jQuery(document).ready(function() {
 
-    jQuery('#myCarousel').carousel();
-	
+    jQuery('#myCarousel').carousel({
+            pause: true,
+            interval: false
+        });
+
+    
+	alert('done');
 });
 </script>
 
