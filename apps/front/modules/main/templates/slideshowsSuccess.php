@@ -6,21 +6,21 @@ jQuery(document).ready(function() {
             interval: false
         });
 
-    
+
 	alert('done');
 });
 </script>
 
 
 
-
+<!-- 
 <article class="post">
 	
 <header>
 <div class="title">
 <h2><span>Slideshows</span></h2>
 </div>
-</header>
+</header> -->
 
     <div id="myCarousel" class="carousel slide">
       <ol class="carousel-indicators">
@@ -57,4 +57,4 @@ jQuery(document).ready(function() {
 //else: ?>Missing Carousel<?php 
 //endif; 
 ?>
-</article>
+<!-- </article> -->
