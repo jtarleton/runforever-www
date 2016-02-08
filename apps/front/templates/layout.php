@@ -32,7 +32,7 @@
    <!-- <link href="http://www.runforever.co/css/style.css" rel="stylesheet"> -->
 <link href="http://www.runforever.co/css/datatables.css" rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!--   <script src='https://www.google.com/recaptcha/api.js'></script>
   
   <script src="js/chart.js"></script>
