@@ -2,21 +2,30 @@ generator:
   class: sfDoctrineGenerator
   param:
     model_class:           RfBlogPosts
+    moduleName: rf_blog_posts
     theme:                 admin
-    non_verbose_templates: true
-    with_show:             false
-    singular:              ~
-    plural:                ~
+    non_verbose_templates: false
+    with_show:             true
+    singular:              posts
+    plural:                rf_blog_posts_list
     route_prefix:          rf_blog_posts
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
     config:
-      actions: ~
-      fields:  ~
-      list:    ~
-      filter: 
+      fields:  
+        title:    { credentials: [admin] }
+        position: { credentials: [admin] }
+        created_on : { credentials: [admin] }
+      list:    
+        title:          BlogPosts
+        display: [position, =title, created_on]
+        max_per_page:   10
+        sort:           [created_on, desc]
+      filter:
+        display : [ position, title, created_on ] 
         class: false
-      form:    ~
+      form:    
+        display: [ position, title, created_on ]
       edit:    ~
       new:     ~
