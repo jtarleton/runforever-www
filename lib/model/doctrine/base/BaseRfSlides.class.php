@@ -14,24 +14,27 @@ Doctrine_Manager::getInstance()->bindComponent('RfSlides', 'doctrine');
  * @property string $slide_caption
  * @property string $slide_body
  * @property string $img_url
+ * @property string $published_status
  * @property RfSlideshow $RfSlideshow
  * 
- * @method integer     get()              Returns the current record's "id" value
- * @method integer     get()              Returns the current record's "position" value
- * @method integer     get()              Returns the current record's "slideshow_id" value
- * @method string      get()              Returns the current record's "slide_title" value
- * @method string      get()              Returns the current record's "slide_caption" value
- * @method string      get()              Returns the current record's "slide_body" value
- * @method string      get()              Returns the current record's "img_url" value
- * @method RfSlideshow get()              Returns the current record's "RfSlideshow" value
- * @method RfSlides    set()              Sets the current record's "id" value
- * @method RfSlides    set()              Sets the current record's "position" value
- * @method RfSlides    set()              Sets the current record's "slideshow_id" value
- * @method RfSlides    set()              Sets the current record's "slide_title" value
- * @method RfSlides    set()              Sets the current record's "slide_caption" value
- * @method RfSlides    set()              Sets the current record's "slide_body" value
- * @method RfSlides    set()              Sets the current record's "img_url" value
- * @method RfSlides    set()              Sets the current record's "RfSlideshow" value
+ * @method integer     get()                 Returns the current record's "id" value
+ * @method integer     get()                 Returns the current record's "position" value
+ * @method integer     get()                 Returns the current record's "slideshow_id" value
+ * @method string      get()                 Returns the current record's "slide_title" value
+ * @method string      get()                 Returns the current record's "slide_caption" value
+ * @method string      get()                 Returns the current record's "slide_body" value
+ * @method string      get()                 Returns the current record's "img_url" value
+ * @method string      get()                 Returns the current record's "published_status" value
+ * @method RfSlideshow get()                 Returns the current record's "RfSlideshow" value
+ * @method RfSlides    set()                 Sets the current record's "id" value
+ * @method RfSlides    set()                 Sets the current record's "position" value
+ * @method RfSlides    set()                 Sets the current record's "slideshow_id" value
+ * @method RfSlides    set()                 Sets the current record's "slide_title" value
+ * @method RfSlides    set()                 Sets the current record's "slide_caption" value
+ * @method RfSlides    set()                 Sets the current record's "slide_body" value
+ * @method RfSlides    set()                 Sets the current record's "img_url" value
+ * @method RfSlides    set()                 Sets the current record's "published_status" value
+ * @method RfSlides    set()                 Sets the current record's "RfSlideshow" value
  * 
  * @package    runforever
  * @subpackage model
@@ -101,6 +104,16 @@ abstract class BaseRfSlides extends sfDoctrineRecord
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 250,
+             ));
+        $this->hasColumn('published_status', 'string', 250, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => 'draft',
              'notnull' => true,
              'autoincrement' => false,
              'length' => 250,

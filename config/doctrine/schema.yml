@@ -644,6 +644,14 @@ RfSlides:
       primary: false
       notnull: true
       autoincrement: false
+    published_status:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: draft
+      notnull: true
+      autoincrement: false
   relations:
     RfSlideshow:
       local: slideshow_id
