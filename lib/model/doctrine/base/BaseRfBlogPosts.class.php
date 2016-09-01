@@ -11,24 +11,30 @@ Doctrine_Manager::getInstance()->bindComponent('RfBlogPosts', 'doctrine');
  * @property integer $position
  * @property string $title
  * @property string $body
+ * @property string $intro
  * @property string $img_src
+ * @property string $published_status
  * @property timestamp $created_on
  * @property timestamp $updated_on
  * 
- * @method integer     get()           Returns the current record's "id" value
- * @method integer     get()           Returns the current record's "position" value
- * @method string      get()           Returns the current record's "title" value
- * @method string      get()           Returns the current record's "body" value
- * @method string      get()           Returns the current record's "img_src" value
- * @method timestamp   get()           Returns the current record's "created_on" value
- * @method timestamp   get()           Returns the current record's "updated_on" value
- * @method RfBlogPosts set()           Sets the current record's "id" value
- * @method RfBlogPosts set()           Sets the current record's "position" value
- * @method RfBlogPosts set()           Sets the current record's "title" value
- * @method RfBlogPosts set()           Sets the current record's "body" value
- * @method RfBlogPosts set()           Sets the current record's "img_src" value
- * @method RfBlogPosts set()           Sets the current record's "created_on" value
- * @method RfBlogPosts set()           Sets the current record's "updated_on" value
+ * @method integer     get()                 Returns the current record's "id" value
+ * @method integer     get()                 Returns the current record's "position" value
+ * @method string      get()                 Returns the current record's "title" value
+ * @method string      get()                 Returns the current record's "body" value
+ * @method string      get()                 Returns the current record's "intro" value
+ * @method string      get()                 Returns the current record's "img_src" value
+ * @method string      get()                 Returns the current record's "published_status" value
+ * @method timestamp   get()                 Returns the current record's "created_on" value
+ * @method timestamp   get()                 Returns the current record's "updated_on" value
+ * @method RfBlogPosts set()                 Sets the current record's "id" value
+ * @method RfBlogPosts set()                 Sets the current record's "position" value
+ * @method RfBlogPosts set()                 Sets the current record's "title" value
+ * @method RfBlogPosts set()                 Sets the current record's "body" value
+ * @method RfBlogPosts set()                 Sets the current record's "intro" value
+ * @method RfBlogPosts set()                 Sets the current record's "img_src" value
+ * @method RfBlogPosts set()                 Sets the current record's "published_status" value
+ * @method RfBlogPosts set()                 Sets the current record's "created_on" value
+ * @method RfBlogPosts set()                 Sets the current record's "updated_on" value
  * 
  * @package    runforever
  * @subpackage model
@@ -75,7 +81,26 @@ abstract class BaseRfBlogPosts extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
+        $this->hasColumn('intro', 'string', null, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => '',
+             ));
         $this->hasColumn('img_src', 'string', 250, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => 'http://placehold.it/140x100',
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 250,
+             ));
+        $this->hasColumn('published_status', 'string', 250, array(
              'type' => 'string',
              'fixed' => 0,
              'unsigned' => false,

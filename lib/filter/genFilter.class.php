@@ -62,7 +62,7 @@ class genFilter extends sfFilter
                 $regLandingPage = true;
             }
 
-        	if( $module != 'security'  && !$regLandingPage)
+        	if( !in_array($module,array('security','main'))  && !$regLandingPage)
         	{
 	        	// If module is 'ajax', we have a special stop point
 

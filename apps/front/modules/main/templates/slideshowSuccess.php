@@ -1,3 +1,17 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+    jQuery('#myCarousel').carousel({
+            pause: true,
+            interval: false
+        });
+
+
+});
+</script>
+
+
+
 <article class="post">
 	
 <header>
@@ -12,18 +26,11 @@
 
 
 <?php
-
-//foreach($slideshows as $slideshows): ?>
-
-<?php 
-//echo link_to($slideshow->getTitle(), '@slideshow?ss='.$slideshow->getId()); ?>
-
-<?php //endforeach; ?>
-<?php 
-if(class_exists('Carousel')): 
+if(class_exists('Carousel')):
 //Carousel::get($slides->getData())->render(); 
 
 foreach($slides as $slide):
+
 echo $slide->getSlideBody();
 echo $slide->getSlideTitle();
 echo $slide->getSlideCaption();

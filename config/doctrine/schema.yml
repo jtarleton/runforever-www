@@ -81,7 +81,22 @@ RfBlogPosts:
       primary: false
       notnull: false
       autoincrement: false
+    intro:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     img_src:
+      type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      default: 'http://placehold.it/140x100'
+      notnull: false
+      autoincrement: false
+    published_status:
       type: string(250)
       fixed: false
       unsigned: false
@@ -141,6 +156,45 @@ RfBlogTerms:
       autoincrement: false
     type:
       type: string(250)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+RfComment:
+  connection: doctrine
+  tableName: rf_comment
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    post_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    comment_text:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    uid:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created:
+      type: date(25)
       fixed: false
       unsigned: false
       primary: false

@@ -257,7 +257,7 @@ if(!in_array( $_SERVER['GEOIP_ADDR'], $ips) ){
 				  		$this->getUser()->setAuthenticated(true);
 
 				  		$this->getUser()->setAttribute('username',  $clean['username']);
-
+sfContext::getInstance()->getStorage()->write('usr',$usr);
 
 if($usr->username=='jtarleton') {
 $this->getUser()->addCredential('admin');

@@ -31,6 +31,10 @@ class mainActions extends sfActions
 public function executeKit() {
 
 }
+public function executeSlidedetail($request) {
+$query = 1;
+$this->slide = RfSlidesTable::getInstance()->find($query);
+}
 public function executeFilms(sfWebRequest $request) {
 $this->films = RfFilmsTable::getInstance()->findAll();
 }
@@ -175,10 +179,22 @@ public function executeRunforever() {
 $this->posts =Doctrine_Query::create()
         ->select('p.*')
         ->from('RfBlogPosts p')
+->where("p.published_status = 'published'")
         ->orderBy('p.id DESC')->execute();
 
  //$this->posts =RfBlogPostsTable::getInstance()->findBy(array(), array('id' => 'ASC'));
 }
+
+
+
+public function executeRfpostdetail(sfWebRequest $request) {
+$pid = $request->getParameter('pid');
+$this->post = RfBlogPostsTable::getInstance()->find($pid);
+}
+
+
+
+
 
 public function executeEvents() {
 $this->events = RfEventsTable::getInstance()->findAll();

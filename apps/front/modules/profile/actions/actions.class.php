@@ -39,16 +39,17 @@ if($this->passwordResetForm->isValid()) {
 $vals = $this->passwordResetForm->getValues();
   
   $usr=$this->getUser();
-  $u =Doctrine_Core::getTable('RfUsers')->findOneBy('username', $usr->getAttribute('username')); 
+  $u =Doctrine_Core::getTable('RfUsers')->findOneBy('username', sfContext::getInstance()->getStorage()->read('usr')->username);
 
 
-            $u->setUserpass($vals['confirmpass']);
+            $u->setUserpass(HashLib::create_hash($vals['confirmpass']));
         
                     $u->save();
 
                     $usrname=  $u->getUsername();
                 $newpassinfo = $vals['confirmpass'];
               // The message
+$message = '';
                 $message .= "Hello $usrname!\r\nThis is to notify you your password change on Run Forever has been processed.\r\n\r\n$newpassinfo\r\n\r\nIf this information request was initiated in error, please let us know.\r\nThe RunForever Team";
  // In case any of our lines are larger than 70 characters, we should use wordwrap()
             $message = wordwrap($message, 70, "\r\n");

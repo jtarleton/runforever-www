@@ -4,10 +4,20 @@
 # default rules
 homepage:
   url:   /
-  param: { module: main, action: index }
+  param: { module: main, action: runforever }
 frontdoor:
-  url: /frontdoor
+  url: /ulogin
   param: { module: security, action: login }
+rfpostdetail:
+  url: /detail/:pid
+  param: { module: main, action: rfpostdetail }
+  requirements: [pid]
+profile:
+  url: /profile/index
+  param: { module: profile, action: index }
+changepassword:
+  url: /profile/changepassword
+  param: { module: profile, action: passwordreset }
 register:
   url: /register
   param: { module: main, action: register }
@@ -53,9 +63,15 @@ forever:
 about:
   url: /about
   param: { module: main, action: about }
-ss:
+slideshows:
   url: /slideshows
   param: { module: main, action: slideshows } 
+slideshow:
+  url: /slideshow/:ss
+  param: { module: main, action: slideshow }
+slide:
+  url: /slideshow/:ss/slide/:s
+  param: { module: main, action: slide }
 
 rf_gear_reviews:
   url: /admin/gear

@@ -1,4 +1,4 @@
-
+<div id="main">
 
 
 
@@ -14,30 +14,27 @@
             <!-- Post -->
               <article class="post">
                 <header>
-                  <div class="title">
+                  <div class="title splash">
                     <h2><a href="#"><span><?php echo $post->getTitle(); ?></span></a></h2></div>
 </header>
-                    <div>
-                        <p><?php echo nl2br($post->getBody()); ?></p>
+                   
 
+<div style="float:left; margin-right:20px;">
+<a href="#" class="image crop-height scaled"><img src="<?php echo $post->getImgSrc(); ?>" alt="" /></a>
+</div>
+ 
+                        <p><?php echo $post->getBody(); ?></p>
 
-
-	
-
-
-
-
-                  </div>
                   <div class="meta">
-                    <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                    <time class="published" datetime="2015-11-01"></time>
+
                     <a href="#" class="author"><span class="name">Administrator</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
+
                   </div>
                 </header>
-                <a href="#" class="image featured">	<img src="<?php echo $post->getImgSrc(); ?>" alt="" /></a>
-                <p>More content...</p>
                 <footer>
                   <ul class="actions">
-                    <li><a href="#" class="button big">Continue Reading</a></li>
+                    <li><a href="http://www.runforever.co/news" class="button big">Go to Blog</a></li>
                   </ul>
                   <ul class="stats">
                     <li><a href="#">General</a></li>
@@ -419,10 +416,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                 <li><a href="" class="disabled button big previous">Previous Page</a></li>
                 <li><a href="#" class="button big next">Next Page</a></li>
               </ul>
-<!--
-          </div> -->
-
-
+          </div>
 
 
 

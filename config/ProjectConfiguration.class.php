@@ -1,5 +1,5 @@
 <?php
-require('/var/runforever-www/web/lib/UniversalClassLoader.php');
+require_once('/var/runforever-www/lib/UniversalClassLoader.php');
 require_once dirname(__FILE__).'/../lib/autoload/sfCoreAutoload.class.php';
 sfCoreAutoload::register();
 

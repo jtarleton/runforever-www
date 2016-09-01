@@ -5,19 +5,26 @@ function klean($txt) {
 
 $fields = 'foo,bar,baz';
 if(!isset($_POST['csv_fields'])): ?>
-<b>	Run this on your table:</b><p>SELECT `COLUMN_NAME` 
+
+<h2>PHP Data Objects Helper Monkey for MySQL</h2>
+<img src="http://www.runforever.co/images/th.jpg"></img>
+
+
+<b>Quickly obtain a comma-delimited list of fields by running this on your MySQL table:</b><p><pre>SELECT `COLUMN_NAME` 
 FROM `INFORMATION_SCHEMA`.`COLUMNS` 
 
 WHERE `TABLE_SCHEMA`='db' 
-    AND `TABLE_NAME`='tblname';</p>
+    AND `TABLE_NAME`='tblname';</pre></p>
+<br>
+<fieldset><legend>Details of your data type</legend>
 <form action="classmaker.php" method="POST">
-
-DB User Name<input type="text" name="dbuser" value="">
-DB Pass <input type="password" name="dbpass" value="">
-DB Name <input type="text" name="dbname" value="">
-Table Name * <input type="text" name="classname" value="Code">
-Parent Class Name<input type="text" name="parent" value="BaseObject">
-Column Names *<textarea name="csv_fields">
+<p>
+DB User Name<input type="text" name="dbuser" value=""></p>
+<p>DB Pass <input type="password" name="dbpass" value=""></p>
+<p>DB Name <input type="text" name="dbname" value=""></p>
+<p>Table Name * <input type="text" name="classname" value="Code"></p>
+<p>Parent Class Name<input type="text" name="parent" value="BaseObject"></p>
+<p>Fields *<textarea name="csv_fields"></p>
 <?php echo $fields; ?>
 </textarea>
 
@@ -274,7 +281,7 @@ $pdo = parent::Connect();
 
 	echo implode(',',$markers); 
 
-	?>');
+	?>)');
 
 
 	<?php foreach(explode(',', @$_POST['csv_fields']) as $field) { ?>	

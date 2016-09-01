@@ -11,25 +11,17 @@
 
 
 
-<div>
 
 
-
-<img src="<?php echo $quote->getQuoteImgSrc(); ?>" style="width:100px; height:100px;"></img>
-
-
-<p><i>&#8220;<?php echo $quote->getQuoteText(); ?>&#8221;</i>
-<br /><br />
-<small>
-<?php echo $quote->getQuoteAuthor(); ?></small>
-</p>
+<div style="float:left; margin-right:10px;">
+<img class="image crop-height scale" src="<?php echo $quote->getQuoteImgSrc(); ?>"></img>
 </div>
-
-
-
-
-
-
+<br /><br />
+<p style="font-family:Garamond; serif; font-weight:800;">&#8220;<?php echo $quote->getQuoteText(); ?>&#8221;
+</p>
+<div style="margin-left:85px; font-size:90%;">
+<?php echo $quote->getQuoteAuthor(); ?></small>
+</div><hr/>
 
 
 

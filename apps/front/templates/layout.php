@@ -19,21 +19,40 @@
 
     <link rel="shortcut icon" href="http://www.runforever.co/images/favicon.ico" />
 
-    <?php include_stylesheets() ?>
-    <?php //include_javascripts() ?>
+    <?php // include_stylesheets() ?>
+    <?php include_javascripts() ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+   <!--  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'> -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.png">
     <title>Run Forever</title>
-   <!-- <link href="http://www.runforever.co/css/style.css" rel="stylesheet"> -->
+<!--    <link href="http://www.runforever.co/css/style.css" rel="stylesheet">
+--><style type="text/css">
 
-<style type="text/css">
+.splash {
+}
+.crop-height {
+  max-width: 140px; /* img src width (if known) */
+  max-height: 100px;
+  overflow: hidden; 
+ margin-bottom:10px; padding:3px; border:1px solid #CCC; background:#F0F0F0;
 
 
+}
+
+img.scale {
+  /* corrects inline gap in enclosing div */
+  display: block;
+  max-width: 100%;
+  /* just in case, to force correct aspect ratio */
+  height: auto !important;
+  width: auto\9; /* ie8+9 */
+  /* lt ie8 */
+  -ms-interpolation-mode: bicubic; 
+}
 
 
 	
@@ -192,13 +211,13 @@
 
 </style>
 
-<link href="http://www.runforever.co/css/datatables.css" rel="stylesheet">
+<!-- <link href="http://www.runforever.co/css/datatables.css" rel="stylesheet">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!--   <script src='https://www.google.com/recaptcha/api.js'></script>
-  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>   
+-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="js/chart.js"></script>
-    <script type="text/javascript" src="http://www.runforever.co/js/datatables.js"></script> -->
+    <script type="text/javascript" src="http://www.runforever.co/js/datatables.js"></script>
  <script type="text/javascript" src="http://www.runforever.co/js/carousel.js"></script>
 
 
@@ -216,7 +235,6 @@
 
 
 
-    <!-- Main -->
           <div id="main">
 
 
@@ -262,33 +280,22 @@
                   <li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
                   <li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
                   <li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li> -->
-                  <li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+                  <li><!-- <a href="#" class="fa-envelope"><span class="label">Email</span></a>--></li>
                 </ul>
-                <p class="copyright">&copy; Run Forever.</p>
+                <p class="copyright">&copy;<?php date('Y'); ?> Run Forever</p>
               </section>
 
           </section>
 
       </div>
 
-    <!-- Scripts 
       <script src="http://www.runforever.co/assets/js/jquery.min.js"></script>
-      
-
       <script src="http://www.runforever.co/assets/js/skel.min.js"></script>
-      
-
-      <script src="http://www.runforever.co/assets/js/util.js"></script> -->
-      
+      <script src="http://www.runforever.co/assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <!-- 
-
-      <script src="http://www.runforever.co/assets/js/main.js"></script> -->
-
+      <script src="http://www.runforever.co/assets/js/main.js"></script>
   </body>
 </html>
-
-
 
 
 

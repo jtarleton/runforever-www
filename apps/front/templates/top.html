@@ -4,33 +4,33 @@
 
         <!-- Header -->
           <header id="header">
-            <h1><a href="#">Run Forever</a></h1>
+            <h1><?php echo link_to('Run Forever', '@homepage'); ?></a></h1>
             <nav class="links">
               <ul>
-<li><a href="/news">News</a></li>
+<li><a href="/archive">Archive</a></li>
                 <li><a href="/running_quotes">Quotes</a></li>
     <li><a href="/slideshows">Slideshows</a></li>
-    <li><a href="/running_films">Films</a></li>
+<!--     <li><a href="/running_films">Films</a></li>
                 <li><a href="/running_articles">Articles</a></li>
                 <li><a href="/running_gear">Gear Reviews</a></li>
              
     <li><a href="/running_events">Events</a></li>
-
+-->
 <?php if(sfContext::getInstance()->getUser()->isAuthenticated() ): ?>
  <li><a href="http://www.runforever.co/security/logout">Logout</a></li>
 <?php else: ?>
-  <li><a href="http://www.runforever.co/login">Login</a></li> 
+  <li><a href="http://www.runforever.co/ulogin">Login</a></li> 
 <?php endif; ?>
               </ul>
             </nav>
             <nav class="main">
               <ul>
-                <li class="search">
+                <!-- <li class="search">
                   <a class="fa-search" href="#search">Search</a>
                   <form id="search" method="get" action="#">
                     <input type="text" name="query" placeholder="Search" />
                   </form>
-                </li>
+                </li> -->
                 <li class="menu">
                   <a class="fa-bars" href="#menu">Menu</a>
                 </li>
@@ -42,27 +42,29 @@
           <section id="menu">
 
             <!-- Search -->
-              <section>
+              <section><!-- 
                 <form class="search" method="get" action="#">
                   <input type="text" name="query" placeholder="Search" />
-                </form>
+                </form> -->
               </section>
 
             <!-- Links -->
               <section>
                 <ul class="links">
+<?php if(sfContext::getInstance()->getUser()->isAuthenticated() ): ?>
                   <li>
                     <a href="#">
-                      <h3>Lorem ipsum</h3>
-                      <p>Feugiat tempus veroeros dolor</p>
+                      <h3><?php echo link_to('Profile','@profile'); ?></a></h3>
+                      <p></p>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <h3>Dolor sit amet</h3>
-                      <p>Sed vitae justo condimentum</p>
+                      <h3><?php echo link_to('Change Password', '@changepassword'); ?></h3>
+                      <p></p>
                     </a>
                   </li>
+<?php endif; ?>
                   <li>
                     <a href="#">
                       <h3>Feugiat veroeros</h3>
@@ -80,11 +82,16 @@
 
             <!-- Actions -->
               <section>
+
+<?php if(sfContext::getInstance()->getUser()->isAuthenticated() ): ?>
+
+<?php else: ?>
+
                 <ul class="actions vertical">
-                  <li><a href="http://www.runforever.co/login" class="button big fit">Log In</a></li>
+                  <li><a href="http://www.runforever.co/ulogin" class="button big fit">Log In</a></li>
 
                     <li><a href="http://www.runforever.co/register" class="button big fit">Register</a></li>
-
+<?php endif; ?>
                 </ul>
               </section>
 
