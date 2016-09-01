@@ -11,6 +11,7 @@ Doctrine_Manager::getInstance()->bindComponent('RfGearReviews', 'doctrine');
  * @property string $product
  * @property string $product_description
  * @property string $review_text
+ * @property string $img_src
  * @property float $star_rating
  * @property string $published_status
  * 
@@ -18,12 +19,14 @@ Doctrine_Manager::getInstance()->bindComponent('RfGearReviews', 'doctrine');
  * @method string        get()                    Returns the current record's "product" value
  * @method string        get()                    Returns the current record's "product_description" value
  * @method string        get()                    Returns the current record's "review_text" value
+ * @method string        get()                    Returns the current record's "img_src" value
  * @method float         get()                    Returns the current record's "star_rating" value
  * @method string        get()                    Returns the current record's "published_status" value
  * @method RfGearReviews set()                    Sets the current record's "id" value
  * @method RfGearReviews set()                    Sets the current record's "product" value
  * @method RfGearReviews set()                    Sets the current record's "product_description" value
  * @method RfGearReviews set()                    Sets the current record's "review_text" value
+ * @method RfGearReviews set()                    Sets the current record's "img_src" value
  * @method RfGearReviews set()                    Sets the current record's "star_rating" value
  * @method RfGearReviews set()                    Sets the current record's "published_status" value
  * 
@@ -71,6 +74,15 @@ abstract class BaseRfGearReviews extends sfDoctrineRecord
              'notnull' => false,
              'autoincrement' => false,
              'length' => '',
+             ));
+        $this->hasColumn('img_src', 'string', 200, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 200,
              ));
         $this->hasColumn('star_rating', 'float', null, array(
              'type' => 'float',

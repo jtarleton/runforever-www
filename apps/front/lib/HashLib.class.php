@@ -162,3 +162,4 @@ public static function pbkdf2($algorithm, $password, $salt, $count, $key_length,
 
 
 }
+//echo HashLib::create_hash('foo');
