@@ -431,6 +431,13 @@ RfGearReviews:
       default: '0'
       notnull: false
       autoincrement: false
+    published_status:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
 RfPics:
   connection: doctrine
   tableName: rf_pics

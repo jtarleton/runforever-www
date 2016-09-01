@@ -26,21 +26,21 @@
                         <p><?php echo $post->getBody(); ?></p>
 
                   <div class="meta">
-                    <time class="published" datetime="2015-11-01"></time>
-
+                    <time class="published" datetime="<?php echo $post->getCreatedOn(); ?>"></time>
+<!-- 
                     <a href="#" class="author"><span class="name">Administrator</span><img src="http://www.runforever.co/images/avatar.jpg" alt="" /></a>
-
+-->
                   </div>
                 </header>
                 <footer>
                   <ul class="actions">
-                    <li><a href="http://www.runforever.co/news" class="button big">Go to Blog</a></li>
+                    <li><a href="http://www.runforever.co/" class="button small">Continue</a></li>
                   </ul>
-                  <ul class="stats">
+                  <ul class="stats"><!-- 
                     <li><a href="#">General</a></li>
                     <li><a href="#" class="icon fa-heart">28</a></li>
                     <li><a href="#" class="icon fa-comment">128</a></li>
-                  </ul>
+                  --></ul>
                 </footer>
               </article>
 
@@ -411,12 +411,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
               </article>
             -->
 
-            <!-- Pagination -->
+            <!-- Pagination 
               <ul class="actions pagination">
                 <li><a href="" class="disabled button big previous">Previous Page</a></li>
                 <li><a href="#" class="button big next">Next Page</a></li>
               </ul>
-          </div>
+--> 
+         </div>
 
 
 

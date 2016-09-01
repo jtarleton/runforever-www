@@ -164,7 +164,14 @@ public function executeLoginfb(sfWebRequest $request) {
 public function executeAbout() {
 }
 public function executeGear() {
-$this->gear = RfGearReviewsTable::getInstance()->findAll();
+//$this->gear = RfGearReviewsTable::getInstance()->findAll();
+
+$this->gear =Doctrine_Query::create()
+        ->select('p.*')
+        ->from('RfGearReviews p')
+->where("p.published_status = 'published'")
+        ->orderBy('p.id DESC')->execute();
+
 }
 public function executeRecipes() {
 $this->recipes = RfRecipesTable::getInstance()->findAll();

@@ -12,17 +12,20 @@ Doctrine_Manager::getInstance()->bindComponent('RfGearReviews', 'doctrine');
  * @property string $product_description
  * @property string $review_text
  * @property float $star_rating
+ * @property string $published_status
  * 
  * @method integer       get()                    Returns the current record's "id" value
  * @method string        get()                    Returns the current record's "product" value
  * @method string        get()                    Returns the current record's "product_description" value
  * @method string        get()                    Returns the current record's "review_text" value
  * @method float         get()                    Returns the current record's "star_rating" value
+ * @method string        get()                    Returns the current record's "published_status" value
  * @method RfGearReviews set()                    Sets the current record's "id" value
  * @method RfGearReviews set()                    Sets the current record's "product" value
  * @method RfGearReviews set()                    Sets the current record's "product_description" value
  * @method RfGearReviews set()                    Sets the current record's "review_text" value
  * @method RfGearReviews set()                    Sets the current record's "star_rating" value
+ * @method RfGearReviews set()                    Sets the current record's "published_status" value
  * 
  * @package    runforever
  * @subpackage model
@@ -78,6 +81,15 @@ abstract class BaseRfGearReviews extends sfDoctrineRecord
              'notnull' => false,
              'autoincrement' => false,
              'length' => '',
+             ));
+        $this->hasColumn('published_status', 'string', 50, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 50,
              ));
     }
 
