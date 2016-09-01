@@ -5,9 +5,11 @@
                 </div>
 </header>
 
+<br />
+
 	<?php foreach($gear as $gearItem): ?>
 <div class="row">         
-<img style="float:left;" src="http://www.runforever.co/images/custom-1.jpg" alt="" class="crop-height image scale"></img>
+<img style="float:left;" src="<?php echo $gearItem->getImgSrc(); ?>" alt="" class="crop-height image scale"></img>
 
 
 <h4><?php echo $gearItem->getProduct(); ?>

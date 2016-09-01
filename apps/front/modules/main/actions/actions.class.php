@@ -213,6 +213,12 @@ public function executeQuotes() {
 $this->quotes = RfQuotesTable::getInstance()->findAll();
 }
 public function executeSlideshows() {
-$this->slides = RfSlidesTable::getInstance()->findAll();
+//$this->slides = RfSlidesTable::getInstance()->findAll();
+$this->slides = Doctrine_Query::create()
+        ->select('p.*')
+        ->from('RfSlides p')
+->where("p.published_status = 'published'")
+        ->orderBy('p.position ASC')->execute();
+
 }
 }
